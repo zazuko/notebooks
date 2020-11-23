@@ -5,7 +5,7 @@ Visualize age, gender, nationality, time and space dimensions.
 
 # Install
 To setup the project locally:
-* ```python3 -m venv``` create virtual environment
+* ```python3 -m venv venv``` create virtual environment
 * ```source venv/bin/activate``` to activate venv on Linux or  ```venv\Scripts\activate.bat``` to activate venv on Windows
 * ```pip install -r requirements.txt``` install dependencies
 * ```python -m ipykernel install --user --name=ssz``` add your venv to jupyter
