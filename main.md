@@ -19,12 +19,23 @@ Available datasets are:
 * BEW-HEL: Wirtschaftliche Wohnbevölkerung nach Heimatland
 * BEW-HEL-SEX: Wirtschaftliche Wohnbevölkerung nach Heimatland, Geschlecht
 * BEW-SEX: Wirtschaftliche Wohnbevölkerung nach Geschlecht
-
-
 * ANT-GGH-HEL: Anteil nach Grundgesamtheit, Heimatland
-Meaning: % of foreigners ???
 
 Dimensions: Population, Age, Gender, Origin, Time, Place
+
+
+### Real estate
+* APZ: Appartementzimmer
+* WHA: Wohnungen (ohne Appartements)
+* WHA-ZIM: Wohnungen (ohne Appartements) nach Zimmerzahl einer Wohnung
+* WHG: Statistische Wohnungen
+* WHG-ZIM: Statistische Wohnungen nach Zimmerzahl einer Wohnung
+* ZIM: Zimmer
+* ZIM-WHA: Zimmer nach Wohnungsart
+* QMP-EIG-HAA-OBJ-ZIM: Quadratmeterpreis nach Eigentümerart, Handänderungsart, Objektart, Zimmerzahl einer Wohnung
+
+ Dimensions: Appartments, Price, Time, Place
+
 ### Deaths
 * GES-ALT-SEX: Sterbefälle (wirtschaftlich) nach Alter, Geschlecht
 * GES-ALT-SEX-TOU: Sterbefälle (wirtschaftlich) nach Alter, Geschlecht, Todesursachen
@@ -38,17 +49,6 @@ Dimensions: Deaths, Age, Gender, Death cause, Time
 * TIA-BTA-TIG: Tierarten nach Betriebsart, Tiergattung
 * TII-BTA: Tierindividuen nach Betriebsart
 * TII-BTA-TIG: Tierindividuen nach Betriebsart, Tiergattung
-
- TODO: analyse dimensions
-### Real estate
-* APZ: Appartementzimmer
-* WHA: Wohnungen (ohne Appartements)
-* WHA-ZIM: Wohnungen (ohne Appartements) nach Zimmerzahl einer Wohnung
-* WHG: Statistische Wohnungen
-* WHG-ZIM: Statistische Wohnungen nach Zimmerzahl einer Wohnung
-* ZIM: Zimmer
-* ZIM-WHA: Zimmer nach Wohnungsart
-* QMP-EIG-HAA-OBJ-ZIM: Quadratmeterpreis nach Eigentümerart, Handänderungsart, Objektart, Zimmerzahl einer Wohnung
 
  TODO: analyse dimensions
 
@@ -73,3 +73,4 @@ Dimensions: Deaths, Age, Gender, Death cause, Time
 ### Zoo
 Income statements of Zurich Zoo
 * WRT-BTA-EAP: Wert nach Betriebsart, Erfolgsrechnung
+
