@@ -23,7 +23,6 @@ Available datasets are:
 
 Dimensions: Population, Age, Gender, Origin, Time, Place
 
-
 ### Real estate
 * APZ: Appartementzimmer
 * WHA: Wohnungen (ohne Appartements)
@@ -44,6 +43,15 @@ Dimensions: Population, Age, Gender, Origin, Time, Place
 
 Dimensions: Deaths, Age, Gender, Death cause, Time
 
+### Workplaces
+* AST-BEW-BTA: Arbeitsstätten nach Bewilligung, Betriebsart -> number of cafeterias over time, per district
+* AST-BTA: Arbeitsstätten nach Betriebsart -> number of cafeterias/restaurants over time, districts
+
+* BES-BTA: Beschäftigte nach Betriebsart
+* BES-BTA-SEX: Beschäftigte nach Betriebsart, Geschlecht
+
+ TODO: analyse dimensions
+
 ### Animals
 * TIA-BTA: Tierarten nach Betriebsart
 * TIA-BTA-TIG: Tierarten nach Betriebsart, Tiergattung
@@ -52,25 +60,19 @@ Dimensions: Deaths, Age, Gender, Death cause, Time
 
  TODO: analyse dimensions
 
-### Visitors
+
+
+
+## Skipped:
+
+### Zoo, Horte
+* WRT-BTA-EAP: Wert nach Betriebsart, Erfolgsrechnung -> Income statement
 * ZUS-BTA: Zuschauer/innen, Besucher/innen nach Betriebsart
 * ZUS-BTA-HEL: Zuschauer/innen, Besucher/innen nach Betriebsart, Heimatland
 * ZUS-BTA-SEX: Zuschauer/innen, Besucher/innen nach Betriebsart, Geschlecht
 * ZUS-BTA-ZSA: Zuschauer/innen, Besucher/innen nach Betriebsart, Zuschauer- bzw. Besucherart
 
- TODO: analyse dimensions
-
-### Workplaces
-* AST-BEW-BTA: Arbeitsstätten nach Bewilligung, Betriebsart
-* AST-BTA: Arbeitsstätten nach Betriebsart
-* BES-BTA: Beschäftigte nach Betriebsart
-* BES-BTA-SEX: Beschäftigte nach Betriebsart, Geschlecht
-
- TODO: analyse dimensions
 
 
 
-### Zoo
-Income statements of Zurich Zoo
-* WRT-BTA-EAP: Wert nach Betriebsart, Erfolgsrechnung
 
