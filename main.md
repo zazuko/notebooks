@@ -3,6 +3,8 @@
 Available datasets are:
 * [Population](http://localhost:8888/notebooks/population.ipynb)
 * [Real estate](http://localhost:8888/notebooks/real_estate.ipynb)
+* [Economy](http://localhost:8888/notebooks/economy.ipynb)
+
 
 * [Graph exploration I](http://localhost:8888/notebooks/exploratory_queries.ipynb)
 * [Graph exploration II](http://localhost:8888/notebooks/exploring_ssz_graph.ipynb)
@@ -50,7 +52,6 @@ Dimensions: Deaths, Age, Gender, Death cause, Time
 * BES-BTA: Beschäftigte nach Betriebsart
 * BES-BTA-SEX: Beschäftigte nach Betriebsart, Geschlecht
 
- TODO: analyse dimensions
 
 ### Animals
 * TIA-BTA: Tierarten nach Betriebsart
@@ -71,8 +72,3 @@ Dimensions: Deaths, Age, Gender, Death cause, Time
 * ZUS-BTA-HEL: Zuschauer/innen, Besucher/innen nach Betriebsart, Heimatland
 * ZUS-BTA-SEX: Zuschauer/innen, Besucher/innen nach Betriebsart, Geschlecht
 * ZUS-BTA-ZSA: Zuschauer/innen, Besucher/innen nach Betriebsart, Zuschauer- bzw. Besucherart
-
-
-
-
-
