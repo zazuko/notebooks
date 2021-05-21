@@ -1,11 +1,11 @@
-# Linked Data by Zürich’s Statistic Office
+# Linked Data by Zürich Statistical Office
 
-[Zürich’s Statistic Office](https://www.stadt-zuerich.ch/prd/en/index/statistik.html) collects and publishes statistical information from all areas of life. That includes demographics, economy, construction, residency and politics. Corresponding datasets are publised as [Linked Data](https://en.wikipedia.org/wiki/Linked_data).
+[Zürich Statistical Office](https://www.stadt-zuerich.ch/prd/en/index/statistik.html) collects and publishes statistical information from all areas of life. That includes demographics, economy, construction, residency and politics. Corresponding datasets are publised as [Linked Data](https://en.wikipedia.org/wiki/Linked_data).
 
 These tutorials show **how to work with Linked Data**. They demonstrate how to query data published by city of Zurich.
 We recommend them to:
 
-* Explore datasets from Zürich’s Statistic Office
+* Explore datasets from Zürich Statistical Office
 * Retrieve data slices about demographics, real estate and economics
 * Visualize these data slices
 
