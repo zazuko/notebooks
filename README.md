@@ -25,7 +25,7 @@ To setup the project locally:
 For more details on how to setup jupyer notebook in a virtual environment, look [here](https://janakiev.com/blog/jupyter-virtual-envs/)
 
 ### Remotely
-You can execute all notebooks in Google Colab environment. To run it in Colab, you will need to install all dependencies.
+You can execute [data exploration notebooks](#Data-exploration) in Google Colab environment. To run it in Colab, you will need to install all dependencies.
 First, import `requirements.txt` to your workspace. Then install them. You can do it by running (in colab):
 ```!pip install -r requirements.txt```
 
