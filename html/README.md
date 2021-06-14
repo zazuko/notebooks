@@ -6,12 +6,14 @@ These tutorials show **how to work with Linked Data**. They demonstrate how to q
 We recommend them to:
 
 * Explore datasets from Zürich Statistical Office
+
 * Retrieve data slices about demographics, real estate and economics
+
 * Visualize these data slices
 
 ## SPARQL endpoint
 
-If you are familiar with SPARQL, you can execute your queries here: https://ld.stadt-zuerich.ch/sparql/.
+If you are familiar with SPARQL, you can execute your queries here: [https://ld.stadt-zuerich.ch/sparql/].
 Our tutorials show how to work with SPAQRL directly in python.
 
 ## Explore
@@ -19,12 +21,17 @@ Our tutorials show how to work with SPAQRL directly in python.
 We provide tutorials on data model, and data exploration.
 
 Use data exploration tutorials to:
+
 * learn how to work with SPARQL in python
+
 * find demoraphics, economics, or real estate data
+
 * learn about Zurich over time
 
 Use data model tutorial if:
+
 * you want to find other datasets about Zurich
+
 * you don't know how to formulate queries to access it
 
 ### Data model
@@ -32,6 +39,7 @@ Use data model tutorial if:
 Here we explain the logic behind the Zürich's Linked Data model. This tutorial will guide you through the data structure. It will show you available datasets, and the shape they take. You will find there queries explaining data structure, and available dimensions.
 
 The tutorials are:
+
 * [Data model](data_model.html)
 
 
@@ -40,6 +48,9 @@ The tutorials are:
 These tutorials explore available datasets. You will see how to query, preprocess and visualize Zurich datasets. You will find there queries for specific observations.
 
 Available tutorials are:
+
 * [Population](population.html)
+
 * [Real estate](real_estate.html)
+
 * [Economy](economy.html)
