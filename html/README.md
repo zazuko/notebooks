@@ -1,3 +1,5 @@
+
+
 # Linked Data by Zürich Statistical Office
 
 [Zürich Statistical Office](https://www.stadt-zuerich.ch/prd/en/index/statistik.html) collects and publishes statistical information from all areas of life. That includes demographics, economy, construction, residency and politics. Corresponding datasets are publised as [Linked Data](https://en.wikipedia.org/wiki/Linked_data).
@@ -11,10 +13,16 @@ We recommend them to:
 
 * Visualize these data slices
 
+
+
+
 ## SPARQL endpoint
 
-If you are familiar with SPARQL, you can execute your queries here: [https://ld.stadt-zuerich.ch/sparql/].
+If you are familiar with SPARQL, you can execute your queries here: [https://ld.stadt-zuerich.ch/sparql/](https://ld.stadt-zuerich.ch/sparql/).
 Our tutorials show how to work with SPAQRL directly in python.
+
+
+
 
 ## Explore
 
@@ -28,11 +36,14 @@ Use data exploration tutorials to:
 
 * learn about Zurich over time
 
+
 Use data model tutorial if:
 
 * you want to find other datasets about Zurich
 
 * you don't know how to formulate queries to access it
+
+
 
 ### Data model
 
@@ -43,9 +54,12 @@ The tutorials are:
 * [Data model](data_model.html)
 
 
+
+
 ### Data exploration
 
 These tutorials explore available datasets. You will see how to query, preprocess and visualize Zurich datasets. You will find there queries for specific observations.
+
 
 Available tutorials are:
 
@@ -54,3 +68,6 @@ Available tutorials are:
 * [Real estate](real_estate.html)
 
 * [Economy](economy.html)
+
+
+
