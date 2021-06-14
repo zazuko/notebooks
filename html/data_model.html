@@ -64,12 +64,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 /* Styles for the SPARQL kernel */
 
 /* Messages from magics */
-div.krn-spql div.magic { 
+div.krn-spql div.magic {
     color: maroon;
     font-style: italic;
     margin-top: 3px;
 }
-div.krn-spql div.magic-help { 
+div.krn-spql div.magic-help {
     color: maroon;
     font-family: DejaVu Sans Mono, Courier New, Courier, Monospace;
     margin-top: 3px;
@@ -113,12 +113,12 @@ div.krn-spql div.krn-error {
     border: 1px solid red;
     font-family: DejaVu Sans Mono, Courier New, Courier, Monospace;
 }
-div.krn-spql div.krn-error span.title { 
+div.krn-spql div.krn-error span.title {
     color: red; font-weight: bold;
 }
 
 /* Warning */
-div.krn-spql div.krn-warn { 
+div.krn-spql div.krn-warn {
     color: #e87211;
     font-weight: bold;
     padding: 2px;
@@ -4623,7 +4623,7 @@ form{
   .bp3-running-text table th, table.bp3-html-table th{
     color:#182026;
     font-weight:600; }
-  
+
   .bp3-running-text table td,
   table.bp3-html-table td{
     color:#182026; }
@@ -14310,17 +14310,17 @@ a.anchor-link {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 },
                 "HTML-CSS": {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14363,7 +14363,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="SPARQL-endpoint">SPARQL endpoint<a class="anchor-link" href="#SPARQL-endpoint">&#182;</a></h3><p>Data by Zürich Statistical Office is published as Linked Data. It can be accessed with <a href="https://www.w3.org/TR/rdf-sparql-query/">SPARQL queries</a>. You can send queries using HTTP requests. The API endpoint is <strong><a href="https://ld.zazuko.com/query/">https://ld.zazuko.com/query/</a>.</strong></p>
+<h3 id="SPARQL-endpoint">SPARQL endpoint<a class="anchor-link" href="#SPARQL-endpoint">&#182;</a></h3><p>Data by Zürich Statistical Office is published as Linked Data. It can be accessed with <a href="https://www.w3.org/TR/rdf-sparql-query/">SPARQL queries</a>. You can send queries using HTTP requests. The API endpoint is <strong><a href="https://ld.stadt-zuerich.ch/query/">https://ld.stadt-zuerich.ch/query/</a>.</strong></p>
 <p>Let's use <code>SPARQL</code> kernel in jupyter notebook to communicate with the database. First, we will configure the endpoint.</p>
 
 </div>
@@ -14374,7 +14374,7 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sparql-nb"><pre><span></span><span class="c">#Params</span>
-<span class="x">%endpoint https://ld.zazuko.com/query</span>
+<span class="x">%endpoint https://ld.stadt-zuerich.ch/query</span>
 <span class="x">%auth basic public public</span>
 <span class="x">%display table</span>
 
@@ -14393,13 +14393,13 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div class="krn-spql"><div class="magic">Endpoint set to: https://ld.zazuko.com/query</div><div class="magic">HTTP authentication: method=basic, user=public, passwd set</div><div class="magic">Display: table</div><div class="magic">Result maximum size: 50</div></div>
+<div class="krn-spql"><div class="magic">Endpoint set to: https://ld.stadt-zuerich.ch/query</div><div class="magic">HTTP authentication: method=basic, user=public, passwd set</div><div class="magic">Display: table</div><div class="magic">Result maximum size: 50</div></div>
 </div>
 
 </div>
@@ -14422,7 +14422,7 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sparql-nb"><pre><span></span><span class="c"># List graphs in endpoint</span>
-<span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?graphs</span> 
+<span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?graphs</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="k">GRAPH</span> <span class="nv">?graphs</span> <span class="p">{</span>
       <span class="nv">?s</span> <span class="nv">?p</span> <span class="nv">?o</span><span class="p">;</span>
@@ -14442,7 +14442,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14509,7 +14509,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14582,7 +14582,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14632,7 +14632,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14683,7 +14683,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14790,7 +14790,7 @@ a.anchor-link {
 <h2 id="Observation-set">Observation set<a class="anchor-link" href="#Observation-set">&#182;</a></h2><p>The observations in cube are stored in observation set (<code>&lt;https://cube.link/observationSet&gt;</code>). Let's check the observationSet definition in its <a href="https://cube.link/">documentation</a>:</p>
 <p><strong>observationSet</strong><br>
 <em>Connects a cube with a set of observations.</em></p>
-<p>We can find all observations in a cube using <code>cube:observationSet/cube:observation</code> as predicate. 
+<p>We can find all observations in a cube using <code>cube:observationSet/cube:observation</code> as predicate.
 Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX&gt;</code> cube.</p>
 
 </div>
@@ -14826,7 +14826,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14881,7 +14881,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14923,7 +14923,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="nv">?dataset</span> <span class="k">a</span> <span class="nn">cube</span><span class="p">:</span><span class="nt">Cube</span><span class="p">;</span>
-             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?observation</span><span class="p">.</span> 
+             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?observation</span><span class="p">.</span>
     <span class="nv">?observation</span> <span class="nv">?obsProperty</span> <span class="nv">?obsVal</span><span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
@@ -14940,7 +14940,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14977,11 +14977,11 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 
-<span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?obsProperty</span> <span class="nv">?label</span> <span class="nv">?description</span> 
+<span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?obsProperty</span> <span class="nv">?label</span> <span class="nv">?description</span>
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX&gt;</span> <span class="k">a</span> <span class="nn">cube</span><span class="p">:</span><span class="nt">Cube</span><span class="p">;</span>
-             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?observation</span><span class="p">.</span> 
+             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?observation</span><span class="p">.</span>
     <span class="nv">?observation</span> <span class="nv">?obsProperty</span> <span class="nv">?obsVal</span><span class="p">.</span>
     <span class="nv">?obsProperty</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="nv">?label</span> <span class="p">.</span>
     <span class="k">OPTIONAL</span> <span class="p">{</span>
@@ -15002,7 +15002,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15070,14 +15070,14 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX&gt;</span> <span class="k">a</span> <span class="nn">cube</span><span class="p">:</span><span class="nt">Cube</span><span class="p">;</span>
-             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span><span class="p">.</span> 
-    
+             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span><span class="p">.</span>
+
     <span class="nv">?obs</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/measure/BEW&gt;</span> <span class="nv">?count</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">RAUM</span> <span class="nv">?place</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">TIME</span> <span class="nv">?time</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">HEL</span> <span class="nv">?origin</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">SEX</span> <span class="nv">?gender</span> <span class="p">.</span>
-    
+
 <span class="p">}</span>
 <span class="k">LIMIT</span> <span class="mi">10</span>
 </pre></div>
@@ -15094,7 +15094,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15173,14 +15173,14 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX&gt;</span> <span class="k">a</span> <span class="nn">cube</span><span class="p">:</span><span class="nt">Cube</span><span class="p">;</span>
-             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span><span class="p">.</span> 
-    
+             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span><span class="p">.</span>
+
     <span class="nv">?obs</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/measure/BEW&gt;</span> <span class="nv">?count</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">RAUM</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="nv">?place</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">TIME</span>  <span class="nv">?time</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">HEL</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span>  <span class="nv">?origin</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">SEX</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span>  <span class="nv">?gender</span> <span class="p">.</span>
-    
+
 <span class="p">}</span>
 <span class="k">LIMIT</span> <span class="mi">10</span>
 </pre></div>
@@ -15197,7 +15197,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15278,11 +15278,11 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 
-<span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?obsProperty</span> <span class="nv">?label</span> <span class="nv">?description</span> 
+<span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?obsProperty</span> <span class="nv">?label</span> <span class="nv">?description</span>
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM&gt;</span> <span class="k">a</span> <span class="nn">cube</span><span class="p">:</span><span class="nt">Cube</span><span class="p">;</span>
-             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?observation</span><span class="p">.</span> 
+             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?observation</span><span class="p">.</span>
     <span class="nv">?observation</span> <span class="nv">?obsProperty</span> <span class="nv">?obsVal</span><span class="p">.</span>
     <span class="nv">?obsProperty</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="nv">?label</span> <span class="p">.</span>
     <span class="k">OPTIONAL</span> <span class="p">{</span>
@@ -15303,7 +15303,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15356,8 +15356,8 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM&gt;</span> <span class="k">a</span> <span class="nn">cube</span><span class="p">:</span><span class="nt">Cube</span><span class="p">;</span>
-             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span> <span class="p">.</span> 
-    
+             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span> <span class="p">.</span>
+
     <span class="nv">?obs</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/measure/QMP&gt;</span> <span class="nv">?price</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">TIME</span>  <span class="nv">?time</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">RAUM</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="nv">?place</span> <span class="p">;</span>
@@ -15365,7 +15365,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
                  <span class="nn">property</span><span class="p">:</span><span class="nt">EIG</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span>  <span class="nv">?ownership</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">HAA</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span>  <span class="nv">?market</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">OBJ</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span>  <span class="nv">?type</span> <span class="p">.</span>
-    
+
 <span class="p">}</span>
 <span class="k">LIMIT</span> <span class="mi">10</span>
 </pre></div>
@@ -15382,7 +15382,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15484,8 +15484,8 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM&gt;</span> <span class="k">a</span> <span class="nn">cube</span><span class="p">:</span><span class="nt">Cube</span><span class="p">;</span>
-             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span> <span class="p">.</span> 
-    
+             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span> <span class="p">.</span>
+
     <span class="nv">?obs</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/measure/QMP&gt;</span> <span class="nv">?price</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">TIME</span>  <span class="nv">?time</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">RAUM</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="nv">?place</span> <span class="p">;</span>
@@ -15493,7 +15493,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
                  <span class="nn">property</span><span class="p">:</span><span class="nt">EIG</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span>  <span class="nv">?ownership</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">HAA</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span>  <span class="nv">?market</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">OBJ</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span>  <span class="nv">?type</span> <span class="p">.</span>
-    <span class="k">FILTER</span> <span class="p">(</span><span class="nv">?price</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>  
+    <span class="k">FILTER</span> <span class="p">(</span><span class="nv">?price</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="k">LIMIT</span> <span class="mi">10</span>
 </pre></div>
@@ -15510,7 +15510,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15624,11 +15624,11 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX&gt;</span> <span class="k">a</span> <span class="nn">cube</span><span class="p">:</span><span class="nt">Cube</span><span class="p">;</span>
-             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span><span class="p">.</span> 
-    
+             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span><span class="p">.</span>
+
     <span class="nv">?obs</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/measure/BEW&gt;</span> <span class="nv">?count</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">TIME</span>  <span class="nv">?time</span> <span class="p">.</span>
-    
+
 <span class="p">}</span>
 <span class="k">GROUP BY</span> <span class="nv">?time</span>
 <span class="k">LIMIT</span> <span class="mi">10</span>
@@ -15646,7 +15646,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15693,11 +15693,11 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX&gt;</span> <span class="k">a</span> <span class="nn">cube</span><span class="p">:</span><span class="nt">Cube</span><span class="p">;</span>
-             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span><span class="p">.</span> 
-    
+             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span><span class="p">.</span>
+
     <span class="nv">?obs</span> <span class="nn">property</span><span class="p">:</span><span class="nt">SEX</span> <span class="nv">?genderIRI</span><span class="p">.</span>
     <span class="nv">?obs</span> <span class="nn">property</span><span class="p">:</span><span class="nt">SEX</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="nv">?gender</span> <span class="p">.</span>
-    
+
 <span class="p">}</span>
 </pre></div>
 
@@ -15713,7 +15713,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15752,14 +15752,14 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX&gt;</span> <span class="k">a</span> <span class="nn">cube</span><span class="p">:</span><span class="nt">Cube</span><span class="p">;</span>
-             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span><span class="p">.</span> 
-    
+             <span class="nn">cube</span><span class="p">:</span><span class="nt">observationSet</span><span class="o">/</span><span class="nn">cube</span><span class="p">:</span><span class="nt">observation</span> <span class="nv">?obs</span><span class="p">.</span>
+
     <span class="nv">?obs</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/measure/BEW&gt;</span> <span class="nv">?count</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">RAUM</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="nv">?place</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">TIME</span>  <span class="nv">?time</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">HEL</span><span class="o">/</span><span class="nn">schema</span><span class="p">:</span><span class="nt">name</span>  <span class="nv">?origin</span> <span class="p">;</span>
                  <span class="nn">property</span><span class="p">:</span><span class="nt">SEX</span>  <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/code/SEX0002&gt;</span> <span class="p">.</span>
-    
+
 <span class="p">}</span>
 <span class="k">LIMIT</span> <span class="mi">10</span>
 </pre></div>
@@ -15776,7 +15776,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15834,9 +15834,9 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="SPEX">SPEX<a class="anchor-link" href="#SPEX">&#182;</a></h2><p>There are many ways to understand linked data structure. SPARQL queries may seem slow to navigate, and take you to the right place.</p>
-<p>To grasp all graph structure at once, we recommend using <a href="https://zazuko.github.io/SPEX/#/?url=https%3A%2F%2Fld.zazuko.com%2Fquery&amp;graph=https%3A%2F%2Flindas.admin.ch%2Fstadtzuerich%2Fstat%2Fviews&amp;forceIntrospection=false">SPEX</a>.</p>
+<p>To grasp all graph structure at once, we recommend using <a href="https://spex.zazuko.com/#/?url=https%3A%2F%2Fld.stadt-zuerich.ch%2Fquery&graph=https%3A%2F%2Flindas.admin.ch%2Fstadtzuerich%2Fstat%2Fviews&prefixes=wdt%3Ahttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F&forceIntrospection=false">SPEX</a>.</p>
 <p><div align="center"><h3>SPEX</h3></div>
-<img src="https://raw.githubusercontent.com/zazuko/ssz/develop/notebooks/img/spex.png" width="600"/></p>
+<img src="img/spex.png" width="600"/></p>
 
 </div>
 </div>

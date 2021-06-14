@@ -19,10 +19,12 @@ To setup the project locally:
 * ```python3 -m venv venv``` create virtual environment
 * ```source venv/bin/activate``` to activate venv on Linux or  ```venv\Scripts\activate.bat``` to activate venv on Windows
 * ```pip install -r requirements.txt``` install dependencies
-* ```python -m ipykernel install --user --name=ssz``` add your venv to jupyter
+* ```python -m ipykernel install --user --name=ssz``` add python kernel to jupyter
+* ```jupyter sparqlkernel install --user ssz```       add SPARQL kernel to jupyter
 * ```jupyter notebook``` start a server
 
 For more details on how to setup jupyer notebook in a virtual environment, look [here](https://janakiev.com/blog/jupyter-virtual-envs/)
+For more details on istalling SPARQL kernel, look [here](http://www.bobdc.com/blog/jupytersparql/)
 
 ### Remotely
 You can execute [data exploration notebooks](#Data-exploration) in Google Colab environment. To run it in Colab, you will need to install all dependencies.
