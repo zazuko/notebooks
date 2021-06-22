@@ -1,0 +1,55 @@
+name: Build HTML version
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Install Jupyter
+        run: pip install jupyterlab sparqlkernel
+
+      - uses: Gr1N/setup-poetry@v4
+        with:
+          poetry-version: 1.1.6
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Build HTML version of the notebook
+        run: ./run.sh
+
+      - name: Convert README.md to index.html
+        uses: docker://pandoc/core:2.9
+        with:
+          args: >-
+            --standalone
+            --output=html/index.html
+            html/README.md
+
+      - name: Configure CNAME
+        run: echo jupyter-test.zazuko.com > html/CNAME
+
+      - name: Clean html directory
+        run: rm -f html/README.md
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: html

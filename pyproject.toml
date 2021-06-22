@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ssz"
+version = "0.1.0"
+description = "Quary and visualize different dimensions in datasets from Zurich Statistics Office"
+authors = ["Magdalena Surówka"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+ipykernel = "^5.3.4"
+sparqlkernel ="^1.3.0"
+matplotlib = "^3.4.2"
+plotly = "^4.14.3"
+mapclassify = "^2.4.2"
+pandas = "^1.2.4"
+graphly = {git = "https://github.com/zazuko/graphly.git", rev = "main"}
+
+[tool.poetry.dev-dependencies]
+black = {version = "^20.8b1", allow-prereleases = true}
+jupyter-contrib-nbextensions = "^0.5.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
