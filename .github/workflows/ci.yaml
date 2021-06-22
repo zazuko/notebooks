@@ -3,7 +3,7 @@ name: Build HTML version
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   docker:

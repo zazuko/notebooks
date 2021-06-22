@@ -14332,20 +14332,20 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div class="notebook-buttons" style="display:flex; padding-top: 5rem;padding-bottom: 2.5rem;line-height: 2.15;">
-    <a href="https://raw.githubusercontent.com/zazuko/ssz/main/notebooks/economy.ipynb" download>
+    <a href="https://raw.githubusercontent.com/zazuko/ssz/master/notebooks/economy.ipynb" download>
         <div id="download-link" style="display: flex;padding-right: 3.5rem;padding-bottom: 0.625rem;border-bottom: 1px solid #ececed; height: auto;align-items: center;">
             <img class="call-to-action-img" src="https://raw.githubusercontent.com/zazuko/ssz/develop/notebooks/img/download.svg" width="22" height="30" style="margin-right: 10px;margin-top: auto;margin-bottom: auto;">
             <div class="call-to-action-txt">Download Notebook</div>
         </div>
     </a>
-    <a href="https://github.com/zazuko/ssz/blob/main/notebooks/economy.ipynb">
+    <a href="https://github.com/zazuko/ssz/blob/master/notebooks/economy.ipynb">
         <div id="github-link" style="display: flex;padding-right: 3.5rem;padding-bottom: 0.625rem;border-bottom: 1px solid #ececed; height: auto;align-items: center;">
             <img class="call-to-action-img" src="https://raw.githubusercontent.com/zazuko/ssz/develop/notebooks/img/github.svg" width="25" height="30" style="margin-right: 10px;margin-top: auto;margin-bottom: auto;">
             <div class="call-to-action-txt">View on GitHub</div>
         </div>
     </a>
-</div><h1 id="Data-model-for-Z&#252;rich-datasets">Data model for Z&#252;rich datasets<a class="anchor-link" href="#Data-model-for-Z&#252;rich-datasets">&#182;</a></h1><p>Zürich Statistical Office collects data on city and its residents. This data is published as <a href="https://en.wikipedia.org/wiki/Linked_data">Linked Data</a>.</p>
-<p>In this tutorial, we will <strong>explain linked data model</strong> behind it. Mainly, we will guide you through the data structure. The tutorial will show you available datasets, and the the shape they take. We will look into queries explaining data structure, and available dimensions.</p>
+</div><h1 id="Data-model-for-Z&#252;rich-datasets">Data model for Z&#252;rich datasets<a class="anchor-link" href="#Data-model-for-Z&#252;rich-datasets">&#182;</a></h1><p>The Zürich Statistical Office collects data on the city and its residents. This data is published as <a href="https://en.wikipedia.org/wiki/Linked_data">Linked Data</a>.</p>
+<p>In this tutorial, we will <strong>explain the linked data model</strong> behind it. Mainly, we will guide you through the data structure. The tutorial will show you available datasets, and the shape they take. We will look into queries explaining the data structure as well as available dimensions.</p>
 
 </div>
 </div>
@@ -14363,8 +14363,8 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="SPARQL-endpoint">SPARQL endpoint<a class="anchor-link" href="#SPARQL-endpoint">&#182;</a></h3><p>Data by Zürich Statistical Office is published as Linked Data. It can be accessed with <a href="https://www.w3.org/TR/rdf-sparql-query/">SPARQL queries</a>. You can send queries using HTTP requests. The API endpoint is <strong><a href="https://ld.stadt-zuerich.ch/query/">https://ld.stadt-zuerich.ch/query/</a>.</strong></p>
-<p>Let's use <code>SPARQL</code> kernel in jupyter notebook to communicate with the database. First, we will configure the endpoint.</p>
+<h3 id="SPARQL-endpoint">SPARQL endpoint<a class="anchor-link" href="#SPARQL-endpoint">&#182;</a></h3><p>Data by the Zürich Statistical Office is published as Linked Data. It can be accessed with <a href="https://www.w3.org/TR/rdf-sparql-query/">SPARQL queries</a>. You can send queries using HTTP requests. The API endpoint is <strong><a href="https://ld.stadt-zuerich.ch/query/">https://ld.stadt-zuerich.ch/query/</a>.</strong></p>
+<p>We use the <code>SPARQL</code> kernel in a jupyter notebook to communicate with the database (you may need to configure this via menu Kernel -&gt; Change kernel -&gt; SPARQL). First, let's configure the endpoint.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14448,7 +14448,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div class="krn-spql"><table><tr class=hdr><th>graphs</th></tr><tr class=odd><td class=val><a href="https://linked.opendata.swiss/graph/bk/termdat" target="_other">https://linked.opendata.swiss/graph/bk/termdat</a></td></tr><tr class=even><td class=val><a href="http://ld.zazuko.com/swissski" target="_other">http://ld.zazuko.com/swissski</a></td></tr><tr class=odd><td class=val><a href="http://ld.zazuko.com/cube-demo" target="_other">http://ld.zazuko.com/cube-demo</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/elcom/electricityprice" target="_other">https://lindas.admin.ch/elcom/electricityprice</a></td></tr><tr class=odd><td class=val><a href="https://linked.opendata.swiss/graph/eCH-0071" target="_other">https://linked.opendata.swiss/graph/eCH-0071</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/fso/agvch" target="_other">https://lindas.admin.ch/fso/agvch</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/sbb/didok" target="_other">https://lindas.admin.ch/sbb/didok</a></td></tr><tr class=even><td class=val><a href="http://example.org/nesting" target="_other">http://example.org/nesting</a></td></tr><tr class=odd><td class=val><a href="http://zazuko.com/gitlab/bafu" target="_other">http://zazuko.com/gitlab/bafu</a></td></tr><tr class=even><td class=val><a href="http://example.org/rdf-cube-schema" target="_other">http://example.org/rdf-cube-schema</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/stadtzuerich/stat" target="_other">https://lindas.admin.ch/stadtzuerich/stat</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/foen/cube/px" target="_other">https://lindas.admin.ch/foen/cube/px</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/stadtzuerich/stat/views" target="_other">https://lindas.admin.ch/stadtzuerich/stat/views</a></td></tr><tr class=even><td class=val><a href="http://example.org/graph/amos" target="_other">http://example.org/graph/amos</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/meta" target="_other">https://lindas.admin.ch/meta</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/foen/cube" target="_other">https://lindas.admin.ch/foen/cube</a></td></tr><tr class=odd><td class=val><a href="https://ld.staatsarchiv.bs.ch/graph/ais-metadata" target="_other">https://ld.staatsarchiv.bs.ch/graph/ais-metadata</a></td></tr></table><div class="tinfo">Total: 17, Shown: 17</div></div>
+<div class="krn-spql"><table><tr class=hdr><th>graphs</th></tr><tr class=odd><td class=val><a href="https://linked.opendata.swiss/graph/eCH-0071" target="_other">https://linked.opendata.swiss/graph/eCH-0071</a></td></tr><tr class=even><td class=val><a href="https://linked.opendata.swiss/graph/BK/FederalDirectory" target="_other">https://linked.opendata.swiss/graph/BK/FederalDirectory</a></td></tr><tr class=odd><td class=val><a href="https://linked.opendata.swiss/graph/sfa/meta" target="_other">https://linked.opendata.swiss/graph/sfa/meta</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/nl/isil" target="_other">https://lindas.admin.ch/nl/isil</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/sbb/didok" target="_other">https://lindas.admin.ch/sbb/didok</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/sbb/nova" target="_other">https://lindas.admin.ch/sbb/nova</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/sbb/setactual" target="_other">https://lindas.admin.ch/sbb/setactual</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/sbb/constructionsite" target="_other">https://lindas.admin.ch/sbb/constructionsite</a></td></tr><tr class=odd><td class=val><a href="https://linked.opendata.swiss/fsvo/animalpest" target="_other">https://linked.opendata.swiss/fsvo/animalpest</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/meta" target="_other">https://lindas.admin.ch/meta</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/sfa/opendataswiss" target="_other">https://lindas.admin.ch/sfa/opendataswiss</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/sfa/stapfer_enquete" target="_other">https://lindas.admin.ch/sfa/stapfer_enquete</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/ontologies" target="_other">https://lindas.admin.ch/ontologies</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/foen/themes" target="_other">https://lindas.admin.ch/foen/themes</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/elcom/electricityprice" target="_other">https://lindas.admin.ch/elcom/electricityprice</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/foen/plazi" target="_other">https://lindas.admin.ch/foen/plazi</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/stadtzuerich/stat" target="_other">https://lindas.admin.ch/stadtzuerich/stat</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/stadtzuerich/stat/views" target="_other">https://lindas.admin.ch/stadtzuerich/stat/views</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/cube/dimension" target="_other">https://lindas.admin.ch/cube/dimension</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/fso/agvch" target="_other">https://lindas.admin.ch/fso/agvch</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/egad/ric-o" target="_other">https://lindas.admin.ch/egad/ric-o</a></td></tr><tr class=even><td class=val><a href="https://lindas.admin.ch/foj/zefix" target="_other">https://lindas.admin.ch/foj/zefix</a></td></tr><tr class=odd><td class=val><a href="https://lindas.admin.ch/territorial" target="_other">https://lindas.admin.ch/territorial</a></td></tr></table><div class="tinfo">Total: 23, Shown: 23</div></div>
 </div>
 
 </div>
@@ -14460,8 +14460,8 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>These graphs have potentilly nothing in common. They are just stored in the same database.</p>
-<p>Here, we have the one endpoint storing information on subject as diverse as train timetable, electricity prices, or animal diseases:</p>
+<p>These graphs have potentilly nothing in common, they are simply stored in the same database.</p>
+<p>Here, we have one endpoint storing information on subject as diverse as the train timetable, electricity prices, or animal diseases:</p>
 <ul>
 <li>trains timetable (<a href="https://lindas.admin.ch/sbb/setactual">https://lindas.admin.ch/sbb/setactual</a>)</li>
 <li>electricity prices (<a href="https://lindas.admin.ch/elcom/electricityprice">https://lindas.admin.ch/elcom/electricityprice</a>)</li>
@@ -14478,7 +14478,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Datasets from Zürich Statistical Office are published in a <code>&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</code> named graph.</p>
+<p>Datasets from the Zürich Statistical Office are published in the following named graph: <code>&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</code></p>
 <p>You can limit your queries to one named graph using <code>WHERE</code> and <code>FROM</code> statements.</p>
 
 </div>
@@ -14517,27 +14517,27 @@ a.anchor-link {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <div class="krn-spql"><table><tr class=hdr><th>s</th>
 <th>p</th>
-<th>o</th></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/ZON3115" target="_other">https://ld.stadt-zuerich.ch/statistics/code/ZON3115</a></td>
-<td class=val><a href="http://schema.org/position" target="_other">http://schema.org/position</a></td>
-<td class=val>3115</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/BER3116" target="_other">https://ld.stadt-zuerich.ch/statistics/code/BER3116</a></td>
-<td class=val><a href="http://schema.org/position" target="_other">http://schema.org/position</a></td>
-<td class=val>3116</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SST3116" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SST3116</a></td>
-<td class=val><a href="http://schema.org/position" target="_other">http://schema.org/position</a></td>
-<td class=val>3116</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/ZON3116" target="_other">https://ld.stadt-zuerich.ch/statistics/code/ZON3116</a></td>
-<td class=val><a href="http://schema.org/position" target="_other">http://schema.org/position</a></td>
-<td class=val>3116</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/BER3117" target="_other">https://ld.stadt-zuerich.ch/statistics/code/BER3117</a></td>
-<td class=val><a href="http://schema.org/position" target="_other">http://schema.org/position</a></td>
-<td class=val>3117</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SST3117" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SST3117</a></td>
-<td class=val><a href="http://schema.org/position" target="_other">http://schema.org/position</a></td>
-<td class=val>3117</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/ZON3117" target="_other">https://ld.stadt-zuerich.ch/statistics/code/ZON3117</a></td>
-<td class=val><a href="http://schema.org/position" target="_other">http://schema.org/position</a></td>
-<td class=val>3117</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/BER3118" target="_other">https://ld.stadt-zuerich.ch/statistics/code/BER3118</a></td>
-<td class=val><a href="http://schema.org/position" target="_other">http://schema.org/position</a></td>
-<td class=val>3118</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SST3118" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SST3118</a></td>
-<td class=val><a href="http://schema.org/position" target="_other">http://schema.org/position</a></td>
-<td class=val>3118</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/BER3119" target="_other">https://ld.stadt-zuerich.ch/statistics/code/BER3119</a></td>
-<td class=val><a href="http://schema.org/position" target="_other">http://schema.org/position</a></td>
-<td class=val>3119</td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
+<th>o</th></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEO0663" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEO0663</a></td>
+<td class=val><a href="http://schema.org/name" target="_other">http://schema.org/name</a></td>
+<td class=val>Frauenkappelen</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/GEO0663" target="_other">https://ld.stadt-zuerich.ch/statistics/code/GEO0663</a></td>
+<td class=val><a href="http://schema.org/name" target="_other">http://schema.org/name</a></td>
+<td class=val>Frauenkappelen</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/ORT0880" target="_other">https://ld.stadt-zuerich.ch/statistics/code/ORT0880</a></td>
+<td class=val><a href="http://schema.org/name" target="_other">http://schema.org/name</a></td>
+<td class=val>Rüeggisberg</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEO0880" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEO0880</a></td>
+<td class=val><a href="http://schema.org/name" target="_other">http://schema.org/name</a></td>
+<td class=val>Rüeggisberg</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/GEO0880" target="_other">https://ld.stadt-zuerich.ch/statistics/code/GEO0880</a></td>
+<td class=val><a href="http://schema.org/name" target="_other">http://schema.org/name</a></td>
+<td class=val>Rüeggisberg</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/ORT1024" target="_other">https://ld.stadt-zuerich.ch/statistics/code/ORT1024</a></td>
+<td class=val><a href="http://schema.org/name" target="_other">http://schema.org/name</a></td>
+<td class=val>Emmen</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEO1024" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEO1024</a></td>
+<td class=val><a href="http://schema.org/name" target="_other">http://schema.org/name</a></td>
+<td class=val>Emmen</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/GEO1024" target="_other">https://ld.stadt-zuerich.ch/statistics/code/GEO1024</a></td>
+<td class=val><a href="http://schema.org/name" target="_other">http://schema.org/name</a></td>
+<td class=val>Emmen</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/ORT1701" target="_other">https://ld.stadt-zuerich.ch/statistics/code/ORT1701</a></td>
+<td class=val><a href="http://schema.org/name" target="_other">http://schema.org/name</a></td>
+<td class=val>Baar</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEO1701" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEO1701</a></td>
+<td class=val><a href="http://schema.org/name" target="_other">http://schema.org/name</a></td>
+<td class=val>Baar</td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
 </div>
 
 </div>
@@ -14588,7 +14588,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div class="krn-spql"><table><tr class=hdr><th>cubes</th></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/AST-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/AST-BTA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WRT-BTA-EAP" target="_other">https://ld.stadt-zuerich.ch/statistics/WRT-BTA-EAP</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX-TOU" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX-TOU</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-SEX-TOU" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-SEX-TOU</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TII-BTA-TIG" target="_other">https://ld.stadt-zuerich.ch/statistics/TII-BTA-TIG</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TIA-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/TIA-BTA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TIA-BTA-TIG" target="_other">https://ld.stadt-zuerich.ch/statistics/TIA-BTA-TIG</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TII-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/TII-BTA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/AST-BEW-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/AST-BEW-BTA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BES-BTA-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BES-BTA-SEX</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BES-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/BES-BTA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-HEL</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-ZSA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-ZSA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHG" target="_other">https://ld.stadt-zuerich.ch/statistics/WHG</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHA-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/WHA-ZIM</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/ZIM</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/WHA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHG-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/WHG-ZIM</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZIM-WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZIM-WHA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/APZ" target="_other">https://ld.stadt-zuerich.ch/statistics/APZ</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ANT-GGH-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/ANT-GGH-HEL</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL-SEX</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-SEX</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM</a></td></tr></table><div class="tinfo">Total: 34, Shown: 34</div></div>
+<div class="krn-spql"><table><tr class=hdr><th>cubes</th></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHG" target="_other">https://ld.stadt-zuerich.ch/statistics/WHG</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHA-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/WHA-ZIM</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/ZIM</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZIM-WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZIM-WHA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/WHA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/APZ" target="_other">https://ld.stadt-zuerich.ch/statistics/APZ</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHG-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/WHG-ZIM</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-SEX</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ANT-GGH-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/ANT-GGH-HEL</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX-TOU" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX-TOU</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-SEX-TOU" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-SEX-TOU</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-SEX</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL-SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/AST-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/AST-BTA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TIA-BTA-TIG" target="_other">https://ld.stadt-zuerich.ch/statistics/TIA-BTA-TIG</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WRT-BTA-EAP" target="_other">https://ld.stadt-zuerich.ch/statistics/WRT-BTA-EAP</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TII-BTA-TIG" target="_other">https://ld.stadt-zuerich.ch/statistics/TII-BTA-TIG</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TII-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/TII-BTA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TIA-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/TIA-BTA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/AST-BEW-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/AST-BEW-BTA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-HEL</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BES-BTA-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BES-BTA-SEX</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BES-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/BES-BTA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-ZSA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-ZSA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM</a></td></tr></table><div class="tinfo">Total: 34, Shown: 34</div></div>
 </div>
 
 </div>
@@ -14601,7 +14601,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>All cubes have the same data structure. This means we can write very similar queries to get data from different cubes.</p>
-<p>Data cubes have following properties:</p>
+<p>Data cubes have the following properties:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14650,7 +14650,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let's learn more about available data cubes. We can access cube description using <code>&lt;http://schema.org/name&gt;</code> property. We will also get its id using <code>&lt;http://schema.org/identifier&gt;</code>.</p>
+<p>Let's learn more about available data cubes. We can access cube description using <code>&lt;http://schema.org/name&gt;</code> property. We will also get its id using <code>&lt;http://schema.org/identifier&gt;</code>. By defining schema and cube as <code>PREFIX</code>, we can save some typing.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14691,83 +14691,83 @@ a.anchor-link {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <div class="krn-spql"><table><tr class=hdr><th>cube</th>
 <th>description</th>
-<th>id</th></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT</a></td>
-<td class=val>Wirtschaftliche Wohnbevölkerung nach Alter, Zeit</td>
-<td class=val>BEW-ALT</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/AST-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/AST-BTA</a></td>
-<td class=val>Arbeitsstätten nach Betriebsart, Zeit</td>
-<td class=val>AST-BTA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WRT-BTA-EAP" target="_other">https://ld.stadt-zuerich.ch/statistics/WRT-BTA-EAP</a></td>
-<td class=val>Wert nach Betriebsart, Erfolgsrechnung, Zeit</td>
-<td class=val>WRT-BTA-EAP</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX-TOU" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX-TOU</a></td>
-<td class=val>Sterbefälle (wirtschaftlich) nach Alter, Geschlecht, Zeit, Todesursachen</td>
-<td class=val>GES-ALT-SEX-TOU</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-SEX-TOU" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-SEX-TOU</a></td>
-<td class=val>Sterbefälle (wirtschaftlich) nach Geschlecht, Zeit, Todesursachen</td>
-<td class=val>GES-SEX-TOU</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TII-BTA-TIG" target="_other">https://ld.stadt-zuerich.ch/statistics/TII-BTA-TIG</a></td>
-<td class=val>Tierindividuen nach Betriebsart, Tiergattung, Zeit</td>
-<td class=val>TII-BTA-TIG</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TIA-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/TIA-BTA</a></td>
-<td class=val>Tierarten nach Betriebsart, Zeit</td>
-<td class=val>TIA-BTA</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TIA-BTA-TIG" target="_other">https://ld.stadt-zuerich.ch/statistics/TIA-BTA-TIG</a></td>
-<td class=val>Tierarten nach Betriebsart, Tiergattung, Zeit</td>
-<td class=val>TIA-BTA-TIG</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TII-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/TII-BTA</a></td>
-<td class=val>Tierindividuen nach Betriebsart, Zeit</td>
-<td class=val>TII-BTA</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/AST-BEW-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/AST-BEW-BTA</a></td>
-<td class=val>Arbeitsstätten nach Bewilligung, Betriebsart, Zeit</td>
-<td class=val>AST-BEW-BTA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX</a></td>
-<td class=val>Sterbefälle (wirtschaftlich) nach Alter, Geschlecht, Zeit</td>
-<td class=val>GES-ALT-SEX</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW</a></td>
-<td class=val>Wirtschaftliche Wohnbevölkerung</td>
-<td class=val>BEW</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW</a></td>
-<td class=val>Wirtschaftliche Wohnbevölkerung nach Zeit</td>
-<td class=val>BEW</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BES-BTA-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BES-BTA-SEX</a></td>
-<td class=val>Beschäftigte nach Betriebsart, Geschlecht, Zeit</td>
-<td class=val>BES-BTA-SEX</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BES-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/BES-BTA</a></td>
-<td class=val>Beschäftigte nach Betriebsart, Zeit</td>
-<td class=val>BES-BTA</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-HEL</a></td>
-<td class=val>Zuschauer/innen, Besucher/innen nach Betriebsart, Heimatland, Zeit</td>
-<td class=val>ZUS-BTA-HEL</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-SEX</a></td>
-<td class=val>Zuschauer/innen, Besucher/innen nach Betriebsart, Geschlecht, Zeit</td>
-<td class=val>ZUS-BTA-SEX</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA</a></td>
-<td class=val>Zuschauer/innen, Besucher/innen nach Betriebsart, Zeit</td>
-<td class=val>ZUS-BTA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-ZSA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-ZSA</a></td>
-<td class=val>Zuschauer/innen, Besucher/innen nach Betriebsart, Zeit, Zuschauer- bzw. Besucherart</td>
-<td class=val>ZUS-BTA-ZSA</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHG" target="_other">https://ld.stadt-zuerich.ch/statistics/WHG</a></td>
+<th>id</th></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHG" target="_other">https://ld.stadt-zuerich.ch/statistics/WHG</a></td>
 <td class=val>Statistische Wohnungen</td>
-<td class=val>WHG</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHG" target="_other">https://ld.stadt-zuerich.ch/statistics/WHG</a></td>
+<td class=val>WHG</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHG" target="_other">https://ld.stadt-zuerich.ch/statistics/WHG</a></td>
 <td class=val>Statistische Wohnungen nach Zeit</td>
-<td class=val>WHG</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHA-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/WHA-ZIM</a></td>
+<td class=val>WHG</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHA-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/WHA-ZIM</a></td>
 <td class=val>Wohnungen (ohne Appartements) nach Zeit, Zimmerzahl einer Wohnung</td>
-<td class=val>WHA-ZIM</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/ZIM</a></td>
+<td class=val>WHA-ZIM</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/ZIM</a></td>
 <td class=val>Zimmer</td>
-<td class=val>ZIM</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/ZIM</a></td>
+<td class=val>ZIM</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/ZIM</a></td>
 <td class=val>Zimmer nach Zeit</td>
-<td class=val>ZIM</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/WHA</a></td>
+<td class=val>ZIM</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZIM-WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZIM-WHA</a></td>
+<td class=val>Zimmer nach Zeit, Wohnungsart</td>
+<td class=val>ZIM-WHA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/WHA</a></td>
 <td class=val>Wohnungen (ohne Appartements)</td>
 <td class=val>WHA</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/WHA</a></td>
 <td class=val>Wohnungen (ohne Appartements) nach Zeit</td>
-<td class=val>WHA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHG-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/WHG-ZIM</a></td>
-<td class=val>Statistische Wohnungen nach Zeit, Zimmerzahl einer Wohnung</td>
-<td class=val>WHG-ZIM</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZIM-WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZIM-WHA</a></td>
-<td class=val>Zimmer nach Zeit, Wohnungsart</td>
-<td class=val>ZIM-WHA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/APZ" target="_other">https://ld.stadt-zuerich.ch/statistics/APZ</a></td>
+<td class=val>WHA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/APZ" target="_other">https://ld.stadt-zuerich.ch/statistics/APZ</a></td>
 <td class=val>Appartementzimmer</td>
 <td class=val>APZ</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/APZ" target="_other">https://ld.stadt-zuerich.ch/statistics/APZ</a></td>
 <td class=val>Appartementzimmer nach Zeit</td>
-<td class=val>APZ</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX</a></td>
-<td class=val>Wirtschaftliche Wohnbevölkerung nach Heimatland, Geschlecht, Zeit</td>
-<td class=val>BEW-HEL-SEX</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL</a></td>
-<td class=val>Wirtschaftliche Wohnbevölkerung nach Heimatland, Zeit</td>
-<td class=val>BEW-HEL</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-SEX</a></td>
+<td class=val>APZ</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WHG-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/WHG-ZIM</a></td>
+<td class=val>Statistische Wohnungen nach Zeit, Zimmerzahl einer Wohnung</td>
+<td class=val>WHG-ZIM</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW</a></td>
+<td class=val>Wirtschaftliche Wohnbevölkerung</td>
+<td class=val>BEW</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW</a></td>
+<td class=val>Wirtschaftliche Wohnbevölkerung nach Zeit</td>
+<td class=val>BEW</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-SEX</a></td>
 <td class=val>Wirtschaftliche Wohnbevölkerung nach Geschlecht, Zeit</td>
-<td class=val>BEW-SEX</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ANT-GGH-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/ANT-GGH-HEL</a></td>
+<td class=val>BEW-SEX</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX</a></td>
+<td class=val>Wirtschaftliche Wohnbevölkerung nach Heimatland, Geschlecht, Zeit</td>
+<td class=val>BEW-HEL-SEX</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ANT-GGH-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/ANT-GGH-HEL</a></td>
 <td class=val>Anteil nach Grundgesamtheit, Heimatland, Zeit</td>
-<td class=val>ANT-GGH-HEL</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-SEX</a></td>
+<td class=val>ANT-GGH-HEL</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL</a></td>
+<td class=val>Wirtschaftliche Wohnbevölkerung nach Heimatland, Zeit</td>
+<td class=val>BEW-HEL</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT</a></td>
+<td class=val>Wirtschaftliche Wohnbevölkerung nach Alter, Zeit</td>
+<td class=val>BEW-ALT</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX-TOU" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX-TOU</a></td>
+<td class=val>Sterbefälle (wirtschaftlich) nach Alter, Geschlecht, Zeit, Todesursachen</td>
+<td class=val>GES-ALT-SEX-TOU</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-SEX-TOU" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-SEX-TOU</a></td>
+<td class=val>Sterbefälle (wirtschaftlich) nach Geschlecht, Zeit, Todesursachen</td>
+<td class=val>GES-SEX-TOU</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-ALT-SEX</a></td>
+<td class=val>Sterbefälle (wirtschaftlich) nach Alter, Geschlecht, Zeit</td>
+<td class=val>GES-ALT-SEX</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/GES-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/GES-SEX</a></td>
 <td class=val>Sterbefälle (wirtschaftlich) nach Geschlecht, Zeit</td>
-<td class=val>GES-SEX</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL-SEX</a></td>
+<td class=val>GES-SEX</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL-SEX</a></td>
 <td class=val>Wirtschaftliche Wohnbevölkerung nach Alter, Heimatland, Geschlecht, Zeit</td>
-<td class=val>BEW-ALT-HEL-SEX</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL</a></td>
+<td class=val>BEW-ALT-HEL-SEX</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-HEL</a></td>
 <td class=val>Wirtschaftliche Wohnbevölkerung nach Alter, Heimatland, Zeit</td>
-<td class=val>BEW-ALT-HEL</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-SEX</a></td>
+<td class=val>BEW-ALT-HEL</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-ALT-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-ALT-SEX</a></td>
 <td class=val>Wirtschaftliche Wohnbevölkerung nach Alter, Geschlecht, Zeit</td>
-<td class=val>BEW-ALT-SEX</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM</a></td>
+<td class=val>BEW-ALT-SEX</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/AST-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/AST-BTA</a></td>
+<td class=val>Arbeitsstätten nach Betriebsart, Zeit</td>
+<td class=val>AST-BTA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TIA-BTA-TIG" target="_other">https://ld.stadt-zuerich.ch/statistics/TIA-BTA-TIG</a></td>
+<td class=val>Tierarten nach Betriebsart, Tiergattung, Zeit</td>
+<td class=val>TIA-BTA-TIG</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/WRT-BTA-EAP" target="_other">https://ld.stadt-zuerich.ch/statistics/WRT-BTA-EAP</a></td>
+<td class=val>Wert nach Betriebsart, Erfolgsrechnung, Zeit</td>
+<td class=val>WRT-BTA-EAP</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TII-BTA-TIG" target="_other">https://ld.stadt-zuerich.ch/statistics/TII-BTA-TIG</a></td>
+<td class=val>Tierindividuen nach Betriebsart, Tiergattung, Zeit</td>
+<td class=val>TII-BTA-TIG</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TII-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/TII-BTA</a></td>
+<td class=val>Tierindividuen nach Betriebsart, Zeit</td>
+<td class=val>TII-BTA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/TIA-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/TIA-BTA</a></td>
+<td class=val>Tierarten nach Betriebsart, Zeit</td>
+<td class=val>TIA-BTA</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/AST-BEW-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/AST-BEW-BTA</a></td>
+<td class=val>Arbeitsstätten nach Bewilligung, Betriebsart, Zeit</td>
+<td class=val>AST-BEW-BTA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-SEX</a></td>
+<td class=val>Zuschauer/innen, Besucher/innen nach Betriebsart, Geschlecht, Zeit</td>
+<td class=val>ZUS-BTA-SEX</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA</a></td>
+<td class=val>Zuschauer/innen, Besucher/innen nach Betriebsart, Zeit</td>
+<td class=val>ZUS-BTA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-HEL</a></td>
+<td class=val>Zuschauer/innen, Besucher/innen nach Betriebsart, Heimatland, Zeit</td>
+<td class=val>ZUS-BTA-HEL</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BES-BTA-SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/BES-BTA-SEX</a></td>
+<td class=val>Beschäftigte nach Betriebsart, Geschlecht, Zeit</td>
+<td class=val>BES-BTA-SEX</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BES-BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/BES-BTA</a></td>
+<td class=val>Beschäftigte nach Betriebsart, Zeit</td>
+<td class=val>BES-BTA</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-ZSA" target="_other">https://ld.stadt-zuerich.ch/statistics/ZUS-BTA-ZSA</a></td>
+<td class=val>Zuschauer/innen, Besucher/innen nach Betriebsart, Zeit, Zuschauer- bzw. Besucherart</td>
+<td class=val>ZUS-BTA-ZSA</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/QMP-EIG-HAA-OBJ-ZIM</a></td>
 <td class=val>Quadratmeterpreis nach Eigentümerart, Handänderungsart, Objektart, Zeit, Zimmerzahl einer Wohnung</td>
 <td class=val>QMP-EIG-HAA-OBJ-ZIM</td></tr></table><div class="tinfo">Total: 39, Shown: 39</div></div>
 </div>
@@ -14787,7 +14787,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Observation-set">Observation set<a class="anchor-link" href="#Observation-set">&#182;</a></h2><p>The observations in cube are stored in observation set (<code>&lt;https://cube.link/observationSet&gt;</code>). Let's check the observationSet definition in its <a href="https://cube.link/">documentation</a>:</p>
+<h2 id="Observation-set">Observation set<a class="anchor-link" href="#Observation-set">&#182;</a></h2><p>Observations in data cubes are stored in observation set (<code>&lt;https://cube.link/observationSet&gt;</code>). Let's check the observationSet definition in its <a href="https://cube.link/">documentation</a>:</p>
 <p><strong>observationSet</strong><br>
 <em>Connects a cube with a set of observations.</em></p>
 <p>We can find all observations in a cube using <code>cube:observationSet/cube:observation</code> as predicate.
@@ -14832,7 +14832,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div class="krn-spql"><table><tr class=hdr><th>obs</th></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0001-R00011-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0001-R00011-Z31122017</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00012-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00012-Z31122017</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0001-R00013-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0001-R00013-Z31122017</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00014-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00014-Z31122017</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0001-R00034-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0001-R00034-Z31122017</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00041-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00041-Z31122017</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0001-R00042-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0001-R00042-Z31122017</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00044-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00044-Z31122017</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00072-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00072-Z31122017</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0001-R00073-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0001-R00073-Z31122017</a></td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
+<div class="krn-spql"><table><tr class=hdr><th>obs</th></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00012-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00012-Z31122017</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0001-R00013-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0001-R00013-Z31122017</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00014-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00014-Z31122017</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00024-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00024-Z31122017</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00033-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00033-Z31122017</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00042-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00042-Z31122017</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0001-R00044-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0001-R00044-Z31122017</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0001-R00052-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0001-R00052-Z31122017</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00072-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL2000-SEX0002-R00072-Z31122017</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00074-Z31122017" target="_other">https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX/observation/HEL1000-SEX0002-R00074-Z31122017</a></td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
 </div>
 
 </div>
@@ -14844,7 +14844,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We can count number of observations using <code>COUNT</code> statement</p>
+<p>We can count the number of observations using <code>COUNT</code> statement</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14899,7 +14899,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>So in <code>BEW-HEL-SEX</code> cube we have almost 10k observations on Zürich population!</p>
+<p>So in <code>BEW-HEL-SEX</code> cube we have almost 10k observations about the population of Zürich!</p>
 
 </div>
 </div>
@@ -14946,7 +14946,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div class="krn-spql"><table><tr class=hdr><th>obsProperty</th></tr><tr class=odd><td class=val><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" target="_other">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td></tr><tr class=even><td class=val><a href="http://schema.org/identifier" target="_other">http://schema.org/identifier</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ZEIT" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ZEIT</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/RAUM" target="_other">https://ld.stadt-zuerich.ch/statistics/property/RAUM</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ALT" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ALT</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/BEW</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/attribute/KORREKTUR" target="_other">https://ld.stadt-zuerich.ch/statistics/attribute/KORREKTUR</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/TIME" target="_other">https://ld.stadt-zuerich.ch/statistics/property/TIME</a></td></tr><tr class=odd><td class=val><a href="https://cube.link/observedBy" target="_other">https://cube.link/observedBy</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/property/BTA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/AST" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/AST</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/EAP" target="_other">https://ld.stadt-zuerich.ch/statistics/property/EAP</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/WRT" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/WRT</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/property/SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/TOU" target="_other">https://ld.stadt-zuerich.ch/statistics/property/TOU</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/GES" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/GES</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/TIG" target="_other">https://ld.stadt-zuerich.ch/statistics/property/TIG</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/TII" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/TII</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/TIA" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/TIA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/property/BEW</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/BES" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/BES</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/property/HEL</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/ZUS" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/ZUS</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ZSA" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ZSA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/WHG" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/WHG</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ZIM</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/WHA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/ZIM</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/property/WHA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/APZ" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/APZ</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/GGH" target="_other">https://ld.stadt-zuerich.ch/statistics/property/GGH</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/ANT" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/ANT</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/EIG" target="_other">https://ld.stadt-zuerich.ch/statistics/property/EIG</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/HAA" target="_other">https://ld.stadt-zuerich.ch/statistics/property/HAA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/OBJ" target="_other">https://ld.stadt-zuerich.ch/statistics/property/OBJ</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/QMP" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/QMP</a></td></tr></table><div class="tinfo">Total: 36, Shown: 36</div></div>
+<div class="krn-spql"><table><tr class=hdr><th>obsProperty</th></tr><tr class=odd><td class=val><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" target="_other">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ZEIT" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ZEIT</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/RAUM" target="_other">https://ld.stadt-zuerich.ch/statistics/property/RAUM</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/attribute/KORREKTUR" target="_other">https://ld.stadt-zuerich.ch/statistics/attribute/KORREKTUR</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/WHG" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/WHG</a></td></tr><tr class=even><td class=val><a href="http://schema.org/identifier" target="_other">http://schema.org/identifier</a></td></tr><tr class=odd><td class=val><a href="https://cube.link/observedBy" target="_other">https://cube.link/observedBy</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/TIME" target="_other">https://ld.stadt-zuerich.ch/statistics/property/TIME</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ZIM</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/WHA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/ZIM</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/WHA" target="_other">https://ld.stadt-zuerich.ch/statistics/property/WHA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/APZ" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/APZ</a></td></tr><tr class=even><td class=val><a href="http://schema.org/identifier" target="_other">http://schema.org/identifier</a></td></tr><tr class=odd><td class=val><a href="https://cube.link/observedBy" target="_other">https://cube.link/observedBy</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/TIME" target="_other">https://ld.stadt-zuerich.ch/statistics/property/TIME</a></td></tr><tr class=odd><td class=val><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" target="_other">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ZEIT" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ZEIT</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/RAUM" target="_other">https://ld.stadt-zuerich.ch/statistics/property/RAUM</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/attribute/KORREKTUR" target="_other">https://ld.stadt-zuerich.ch/statistics/attribute/KORREKTUR</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ZIM</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/WHG" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/WHG</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/BEW</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/property/SEX</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/property/HEL</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/GGH" target="_other">https://ld.stadt-zuerich.ch/statistics/property/GGH</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/ANT" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/ANT</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ALT" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ALT</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/GES" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/GES</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/TOU" target="_other">https://ld.stadt-zuerich.ch/statistics/property/TOU</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/BTA" target="_other">https://ld.stadt-zuerich.ch/statistics/property/BTA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/AST" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/AST</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/TIG" target="_other">https://ld.stadt-zuerich.ch/statistics/property/TIG</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/TIA" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/TIA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/WRT" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/WRT</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/EAP" target="_other">https://ld.stadt-zuerich.ch/statistics/property/EAP</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/TII" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/TII</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/property/BEW</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/ZUS" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/ZUS</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/BES" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/BES</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ZSA" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ZSA</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/OBJ" target="_other">https://ld.stadt-zuerich.ch/statistics/property/OBJ</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/EIG" target="_other">https://ld.stadt-zuerich.ch/statistics/property/EIG</a></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/HAA" target="_other">https://ld.stadt-zuerich.ch/statistics/property/HAA</a></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/QMP" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/QMP</a></td></tr></table><div class="tinfo">Total: 45, Shown: 45</div></div>
 </div>
 
 </div>
@@ -14964,8 +14964,8 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let's get a list of properties for <code>&lt;https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX&gt;</code> data cube. We will also get its labels using <code>schema:name</code>, and descrption using <code>schema:description</code>.</p>
-<p>Since not all properties have a description, we will use <code>OPTIONAL</code> statement to query it.</p>
+<p>Let's get a list of properties for the <code>&lt;https://ld.stadt-zuerich.ch/statistics/BEW-HEL-SEX&gt;</code> data cube. We will also get its labels using <code>schema:name</code>, and descrption using <code>schema:description</code>.</p>
+<p>Since not all properties have a description, we will use the <code>OPTIONAL</code> statement to query it.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15016,10 +15016,10 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <td class=val>Raum</td>
 <td class=val></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/BEW" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/BEW</a></td>
 <td class=val>Wirtschaftliche Wohnbevölkerung</td>
-<td class=val>Wirtschaftliche Wohnbevölkerung</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/property/SEX</a></td>
-<td class=val>Geschlecht</td>
-<td class=val></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/property/HEL</a></td>
+<td class=val>Wirtschaftliche Wohnbevölkerung</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/HEL" target="_other">https://ld.stadt-zuerich.ch/statistics/property/HEL</a></td>
 <td class=val>Heimatland</td>
+<td class=val></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/SEX" target="_other">https://ld.stadt-zuerich.ch/statistics/property/SEX</a></td>
+<td class=val>Geschlecht</td>
 <td class=val></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/TIME" target="_other">https://ld.stadt-zuerich.ch/statistics/property/TIME</a></td>
 <td class=val>Zeit</td>
 <td class=val>Repräsentation der Zeit als ISO 8601 Datum (vereinfacht).</td></tr></table><div class="tinfo">Total: 6, Shown: 6</div></div>
@@ -15034,7 +15034,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We can see that <code>BEW-HEL-SEX</code> data cube contains data on population across:</p>
+<p>We can see that <code>BEW-HEL-SEX</code> data cube contains data on the population across:</p>
 <ul>
 <li>time (german: <em>Zeit</em>)</li>
 <li>place (german: <em>Raum</em>)</li>
@@ -15046,14 +15046,15 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Knowing properties, we can query directlty the measurements. Now, we are able to find the actual data: number of inhabitants across time, place, gender, and origin.</p>
-<p>We will find the measurements using <code>&lt;https://ld.stadt-zuerich.ch/statistics/measure/BEW&gt;</code> as observation's property. We will also cube's dimensions using:</p>
+<p>Knowing properties, we can directlty query the measurements. Now, we are able to find the actual data: number of inhabitants across time, place, gender, and origin.</p>
+<p>We will find the measurements using <code>&lt;https://ld.stadt-zuerich.ch/statistics/measure/BEW&gt;</code> as the observation's property. We will also the cube's dimensions using:</p>
 <ul>
 <li><code>&lt;https://ld.stadt-zuerich.ch/statistics/property/RAUM&gt;</code> for place </li>
 <li><code>&lt;https://ld.stadt-zuerich.ch/statistics/property/TIME&gt;</code> for time </li>
 <li><code>&lt;https://ld.stadt-zuerich.ch/statistics/property/HEL&gt;</code> for origin</li>
 <li><code>&lt;https://ld.stadt-zuerich.ch/statistics/property/SEX&gt;</code> for gender</li>
 </ul>
+<p>And again, making use of <code>PREFIX</code> makes the query more readable.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15104,47 +15105,47 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <th>place</th>
 <th>origin</th>
 <th>gender</th>
-<th>count</th></tr><tr class=odd><td class=val>2000-12-31</td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00073" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00073</a></td>
+<th>count</th></tr><tr class=odd><td class=val>2017-12-31</td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00012" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00012</a></td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL2000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL2000</a></td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0002" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0002</a></td>
-<td class=val>567.0</td></tr><tr class=even><td class=val>2000-12-31</td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00074" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00074</a></td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL1000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL1000</a></td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0001" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0001</a></td>
-<td class=val>3476.0</td></tr><tr class=odd><td class=val>2000-12-31</td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00073" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00073</a></td>
+<td class=val>94.0</td></tr><tr class=even><td class=val>2017-12-31</td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00013" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00013</a></td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL2000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL2000</a></td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0001" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0001</a></td>
-<td class=val>600.0</td></tr><tr class=even><td class=val>2000-12-31</td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00074" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00074</a></td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL2000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL2000</a></td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0001" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0001</a></td>
-<td class=val>745.0</td></tr><tr class=odd><td class=val>2000-12-31</td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00074" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00074</a></td>
+<td class=val>157.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00014" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00014</a></td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL1000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL1000</a></td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0002" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0002</a></td>
-<td class=val>4606.0</td></tr><tr class=even><td class=val>2000-12-31</td>
+<td class=val>267.0</td></tr><tr class=even><td class=val>2017-12-31</td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00024" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00024</a></td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL2000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL2000</a></td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0002" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0002</a></td>
+<td class=val>1686.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00033" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00033</a></td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL1000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL1000</a></td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0002" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0002</a></td>
+<td class=val>4694.0</td></tr><tr class=even><td class=val>2017-12-31</td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00042" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00042</a></td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL2000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL2000</a></td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0002" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0002</a></td>
+<td class=val>1709.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00044" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00044</a></td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL2000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL2000</a></td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0001" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0001</a></td>
+<td class=val>2687.0</td></tr><tr class=even><td class=val>2017-12-31</td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00052" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00052</a></td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL1000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL1000</a></td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0001" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0001</a></td>
+<td class=val>2256.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00072" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00072</a></td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL2000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL2000</a></td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0001" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0001</a></td>
-<td class=val>1087.0</td></tr><tr class=odd><td class=val>2000-12-31</td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00072" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00072</a></td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL2000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL2000</a></td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0002" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0002</a></td>
-<td class=val>959.0</td></tr><tr class=even><td class=val>2000-12-31</td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00072" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00072</a></td>
+<td class=val>1613.0</td></tr><tr class=even><td class=val>2017-12-31</td>
+<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00074" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00074</a></td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL1000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL1000</a></td>
 <td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0002" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0002</a></td>
-<td class=val>4559.0</td></tr><tr class=odd><td class=val>2000-12-31</td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00073" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00073</a></td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL1000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL1000</a></td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0002" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0002</a></td>
-<td class=val>3260.0</td></tr><tr class=even><td class=val>2000-12-31</td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/R00073" target="_other">https://ld.stadt-zuerich.ch/statistics/code/R00073</a></td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/HEL1000" target="_other">https://ld.stadt-zuerich.ch/statistics/code/HEL1000</a></td>
-<td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0001" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0001</a></td>
-<td class=val>2332.0</td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
+<td class=val>4453.0</td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
 </div>
 
 </div>
@@ -15156,7 +15157,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let's replace the IRIs with corresponding labels labels. To do it, we will look for <code>schema:name</code> for each property.</p>
+<p>To make the output more readable, let's replace the IRIs with the corresponding labels. This can be achieved by using <code>schema:name</code> for each property.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15208,46 +15209,46 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <th>origin</th>
 <th>gender</th>
 <th>count</th></tr><tr class=odd><td class=val>2017-12-31</td>
-<td class=val>Rathaus</td>
+<td class=val>Stadt Zürich (ab 1934)</td>
 <td class=val>Schweiz</td>
 <td class=val>männlich</td>
-<td class=val>1164.0</td></tr><tr class=even><td class=val>2017-12-31</td>
-<td class=val>Hochschulen</td>
-<td class=val>Schweiz</td>
-<td class=val>weiblich</td>
-<td class=val>234.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
-<td class=val>Lindenhof</td>
+<td class=val>138104.0</td></tr><tr class=even><td class=val>2017-12-31</td>
+<td class=val>Kreis 1 (Stadtgebiet vor 1893)</td>
 <td class=val>Ausland</td>
 <td class=val>männlich</td>
-<td class=val>157.0</td></tr><tr class=even><td class=val>2017-12-31</td>
-<td class=val>City</td>
-<td class=val>Ausland</td>
-<td class=val>weiblich</td>
-<td class=val>108.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
-<td class=val>Sihlfeld</td>
+<td class=val>1007.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
+<td class=val>Kreis 1 (Stadtgebiet vor 1893)</td>
 <td class=val>Schweiz</td>
 <td class=val>männlich</td>
-<td class=val>7063.0</td></tr><tr class=even><td class=val>2017-12-31</td>
-<td class=val>Werd</td>
+<td class=val>2050.0</td></tr><tr class=even><td class=val>2017-12-31</td>
+<td class=val>Kreis 11 (ab 1970)</td>
 <td class=val>Schweiz</td>
-<td class=val>weiblich</td>
-<td class=val>1507.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
-<td class=val>Langstrasse</td>
+<td class=val>männlich</td>
+<td class=val>23154.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
+<td class=val>altes Quartier Schwamendingen (1934-1969); Kreis 12 (ab 1970)</td>
 <td class=val>Ausland</td>
 <td class=val>männlich</td>
-<td class=val>2647.0</td></tr><tr class=even><td class=val>2017-12-31</td>
-<td class=val>Hard</td>
-<td class=val>Ausland</td>
-<td class=val>weiblich</td>
-<td class=val>2280.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
-<td class=val>Hottingen</td>
+<td class=val>6104.0</td></tr><tr class=even><td class=val>2017-12-31</td>
+<td class=val>altes Quartier Schwamendingen (1934-1969); Kreis 12 (ab 1970)</td>
 <td class=val>Schweiz</td>
-<td class=val>weiblich</td>
-<td class=val>4206.0</td></tr><tr class=even><td class=val>2017-12-31</td>
-<td class=val>Hirslanden</td>
+<td class=val>männlich</td>
+<td class=val>9611.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
+<td class=val>Kreis 10 (ab 1934)</td>
 <td class=val>Ausland</td>
 <td class=val>männlich</td>
-<td class=val>994.0</td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
+<td class=val>5812.0</td></tr><tr class=even><td class=val>2017-12-31</td>
+<td class=val>Kreis 10 (ab 1934)</td>
+<td class=val>Schweiz</td>
+<td class=val>männlich</td>
+<td class=val>14116.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
+<td class=val>Kreis 9 (ab 1934)</td>
+<td class=val>Schweiz</td>
+<td class=val>männlich</td>
+<td class=val>17912.0</td></tr><tr class=even><td class=val>2017-12-31</td>
+<td class=val>Kreis 7 (ab 1934)</td>
+<td class=val>Ausland</td>
+<td class=val>männlich</td>
+<td class=val>5380.0</td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
 </div>
 
 </div>
@@ -15259,13 +15260,13 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Volià! We now got all measurements, across all dimensions in <code>BEW-ALT-SEX</code> data cube.</p>
+<p>Volià! We now got all measurements across all dimensions in the <code>BEW-ALT-SEX</code> data cube. The data could be further refined, for example by filtering on <code>gender</code> or <code>place</code>.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let's do the same exercise for <code>QMP-EIG-HAA-OBJ-ZIM</code> data cube.</p>
+<p>Let's do the same exercise for the <code>QMP-EIG-HAA-OBJ-ZIM</code> data cube.</p>
 <p>First, let's get observations' properties.</p>
 
 </div>
@@ -15317,17 +15318,17 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <td class=val>Raum</td>
 <td class=val></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/ZIM" target="_other">https://ld.stadt-zuerich.ch/statistics/property/ZIM</a></td>
 <td class=val>Zimmerzahl einer Wohnung</td>
-<td class=val></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/TIME" target="_other">https://ld.stadt-zuerich.ch/statistics/property/TIME</a></td>
-<td class=val>Zeit</td>
-<td class=val>Repräsentation der Zeit als ISO 8601 Datum (vereinfacht).</td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/EIG" target="_other">https://ld.stadt-zuerich.ch/statistics/property/EIG</a></td>
+<td class=val></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/OBJ" target="_other">https://ld.stadt-zuerich.ch/statistics/property/OBJ</a></td>
+<td class=val>Objektart</td>
+<td class=val></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/EIG" target="_other">https://ld.stadt-zuerich.ch/statistics/property/EIG</a></td>
 <td class=val>Eigentümerart</td>
 <td class=val></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/HAA" target="_other">https://ld.stadt-zuerich.ch/statistics/property/HAA</a></td>
 <td class=val>Handänderungsart</td>
-<td class=val></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/OBJ" target="_other">https://ld.stadt-zuerich.ch/statistics/property/OBJ</a></td>
-<td class=val>Objektart</td>
-<td class=val></td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/QMP" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/QMP</a></td>
+<td class=val></td></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/measure/QMP" target="_other">https://ld.stadt-zuerich.ch/statistics/measure/QMP</a></td>
 <td class=val>Quadratmeterpreis</td>
-<td class=val>Preis in Franken pro Quadratmeter</td></tr></table><div class="tinfo">Total: 8, Shown: 8</div></div>
+<td class=val>Preis in Franken pro Quadratmeter</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/property/TIME" target="_other">https://ld.stadt-zuerich.ch/statistics/property/TIME</a></td>
+<td class=val>Zeit</td>
+<td class=val>Repräsentation der Zeit als ISO 8601 Datum (vereinfacht).</td></tr></table><div class="tinfo">Total: 8, Shown: 8</div></div>
 </div>
 
 </div>
@@ -15342,10 +15343,10 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <p>Now, let's use these properties to query the data.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
@@ -15375,105 +15376,17 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div class="krn-spql"><table><tr class=hdr><th>time</th>
-<th>place</th>
-<th>rooms</th>
-<th>ownership</th>
-<th>haa</th>
-<th>type</th>
-<th>price</th></tr><tr class=odd><td class=val>2017-12-31</td>
-<td class=val>Werd</td>
-<td class=val>8- und mehr-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>0.0</td></tr><tr class=even><td class=val>2017-12-31</td>
-<td class=val>Weinegg</td>
-<td class=val>8- und mehr-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>0.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
-<td class=val>Langstrasse</td>
-<td class=val>8- und mehr-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>0.0</td></tr><tr class=even><td class=val>2017-12-31</td>
-<td class=val>Albisrieden</td>
-<td class=val>8- und mehr-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>0.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>8- und mehr-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>0.0</td></tr><tr class=even><td class=val>2017-12-31</td>
-<td class=val>Hard</td>
-<td class=val>8- und mehr-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>0.0</td></tr><tr class=odd><td class=val>2017-12-31</td>
-<td class=val>Seebach</td>
-<td class=val>8- und mehr-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>0.0</td></tr><tr class=even><td class=val>2009-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>1- und 1,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>16724.0</td></tr><tr class=odd><td class=val>2009-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>2- und 2,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>13603.0</td></tr><tr class=even><td class=val>2009-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>3- und 3,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>0.0</td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>You can see that some prices are equal to zero. Getting an appartment for free is extremely rare in Switzerland. That's presumably a data issue.</p>
-<p>Let's remove those invalid observations using <code>FILTER</code> statement.</p>
+<p>You can see that some prices come back as zero. Getting an appartment for free is extremely rare in Switzerland. That's presumably a data issue.</p>
+<p>Let's remove those invalid observations using a <code>FILTER</code> statement.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
@@ -15503,94 +15416,6 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div class="krn-spql"><table><tr class=hdr><th>time</th>
-<th>place</th>
-<th>rooms</th>
-<th>ownership</th>
-<th>haa</th>
-<th>type</th>
-<th>price</th></tr><tr class=odd><td class=val>2009-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>1- und 1,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>16724.0</td></tr><tr class=even><td class=val>2009-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>2- und 2,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>13603.0</td></tr><tr class=odd><td class=val>2009-12-31</td>
-<td class=val>Lindenhof</td>
-<td class=val>1- und 1,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>7083.0</td></tr><tr class=even><td class=val>2009-12-31</td>
-<td class=val>Lindenhof</td>
-<td class=val>2- und 2,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>10625.0</td></tr><tr class=odd><td class=val>2009-12-31</td>
-<td class=val>Wollishofen</td>
-<td class=val>1- und 1,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>8315.0</td></tr><tr class=even><td class=val>2009-12-31</td>
-<td class=val>Wollishofen</td>
-<td class=val>2- und 2,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>11417.0</td></tr><tr class=odd><td class=val>2009-12-31</td>
-<td class=val>Wollishofen</td>
-<td class=val>3- und 3,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>11263.0</td></tr><tr class=even><td class=val>2009-12-31</td>
-<td class=val>Wollishofen</td>
-<td class=val>4- und 4,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>6865.0</td></tr><tr class=odd><td class=val>2009-12-31</td>
-<td class=val>Wollishofen</td>
-<td class=val>5- und 5,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>11486.0</td></tr><tr class=even><td class=val>2009-12-31</td>
-<td class=val>Wollishofen</td>
-<td class=val>6- und 6,5-Zimmer Wohnung</td>
-<td class=val>Stockwerkeigentum</td>
-<td class=val></td>
-<td class=val>Wohnung</td>
-<td class=val>4214.0</td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15601,19 +15426,19 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Data-slices">Data slices<a class="anchor-link" href="#Data-slices">&#182;</a></h2><p>Thus far, we queried all observations from the data cube. Sometimes, you are interested in just some of the dimensions. You can aggregate the results using <code>GROUP BY</code> and <code>SUM</code> statements.</p>
-<p>Let's find number of people in Zurich accross <code>property:TIME</code>. To do this, we sum remaining dimensions:</p>
+<p>Let's find the total number of people in Zurich accross <code>property:TIME</code>. To do this, we sum the remaining dimensions:</p>
 <ul>
 <li><code>property:RAUM</code></li>
 <li><code>property:HEL</code></li>
 <li><code>property:SEX</code>  </li>
 </ul>
-<p>We will do it by leaving them out of <code>GROUP BY</code> statement. All unmentioned variables will be aggregated.</p>
+<p>This can be achieved by leaving them out of the <code>GROUP BY</code> statement. All unmentioned variables will be aggregated.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
@@ -15639,50 +15464,17 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div class="krn-spql"><table><tr class=hdr><th>time</th>
-<th>aggCount</th></tr><tr class=odd><td class=val>1920-12-31</td>
-<td class=val>206273.0</td></tr><tr class=even><td class=val>1921-12-31</td>
-<td class=val>200873.0</td></tr><tr class=odd><td class=val>1922-12-31</td>
-<td class=val>199567.0</td></tr><tr class=even><td class=val>1923-12-31</td>
-<td class=val>202949.0</td></tr><tr class=odd><td class=val>1924-12-31</td>
-<td class=val>205202.0</td></tr><tr class=even><td class=val>1925-12-31</td>
-<td class=val>207399.0</td></tr><tr class=odd><td class=val>1926-12-31</td>
-<td class=val>212571.0</td></tr><tr class=even><td class=val>1927-12-31</td>
-<td class=val>217734.0</td></tr><tr class=odd><td class=val>1928-12-31</td>
-<td class=val>227081.0</td></tr><tr class=even><td class=val>1929-12-31</td>
-<td class=val>236267.0</td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>You can also filter the results to include one dimension only. This can be done by setting object to the value you are interested in.</p>
-<p>Let's get number of female inhabitants over time. First, we will find IRIs for gender.</p>
+<p>You can also filter the results to include only one dimension. This can be done by setting the object to the value you are interested in.</p>
+<p>Let's get the number of female inhabitants over time. First, we will find IRIs for gender.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
@@ -15706,31 +15498,6 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div class="krn-spql"><table><tr class=hdr><th>genderIRI</th>
-<th>gender</th></tr><tr class=odd><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0001" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0001</a></td>
-<td class=val>männlich</td></tr><tr class=even><td class=val><a href="https://ld.stadt-zuerich.ch/statistics/code/SEX0002" target="_other">https://ld.stadt-zuerich.ch/statistics/code/SEX0002</a></td>
-<td class=val>weiblich</td></tr></table><div class="tinfo">Total: 2, Shown: 2</div></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15738,10 +15505,10 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <p>In SPARQL, this can be done by setting observation predicate to <code>property:SEX</code>, and its object to <code>&lt;https://ld.stadt-zuerich.ch/statistics/code/SEX0002&gt;</code>.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
@@ -15769,72 +15536,17 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div class="krn-spql"><table><tr class=hdr><th>time</th>
-<th>place</th>
-<th>origin</th>
-<th>count</th></tr><tr class=odd><td class=val>2017-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>Schweiz</td>
-<td class=val>1107.0</td></tr><tr class=even><td class=val>2017-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>Ausland</td>
-<td class=val>417.0</td></tr><tr class=odd><td class=val>1980-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>Schweiz</td>
-<td class=val>NaN</td></tr><tr class=even><td class=val>1980-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>Ausland</td>
-<td class=val>NaN</td></tr><tr class=odd><td class=val>1981-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>Schweiz</td>
-<td class=val>NaN</td></tr><tr class=even><td class=val>1981-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>Ausland</td>
-<td class=val>NaN</td></tr><tr class=odd><td class=val>1982-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>Schweiz</td>
-<td class=val>1354.0</td></tr><tr class=even><td class=val>1982-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>Ausland</td>
-<td class=val>205.0</td></tr><tr class=odd><td class=val>1983-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>Schweiz</td>
-<td class=val>1375.0</td></tr><tr class=even><td class=val>1983-12-31</td>
-<td class=val>Rathaus</td>
-<td class=val>Ausland</td>
-<td class=val>238.0</td></tr></table><div class="tinfo">Total: 10, Shown: 10</div></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Volià, number of female inhabitants across time, origin, and city district.</p>
+<p>Volià, the number of female inhabitants across time, origin, and city district.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="SPEX">SPEX<a class="anchor-link" href="#SPEX">&#182;</a></h2><p>There are many ways to understand linked data structure. SPARQL queries may seem slow to navigate, and take you to the right place.</p>
-<p>To grasp all graph structure at once, we recommend using <a href="https://spex.zazuko.com/#/?url=https%3A%2F%2Fld.stadt-zuerich.ch%2Fquery&graph=https%3A%2F%2Flindas.admin.ch%2Fstadtzuerich%2Fstat%2Fviews&prefixes=wdt%3Ahttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F&forceIntrospection=false">SPEX</a>.</p>
+<h2 id="SPEX">SPEX<a class="anchor-link" href="#SPEX">&#182;</a></h2><p>There are many ways to learn about the structure of linked data. SPARQL queries may seem dense at first and may take some time to get you to the right place. However, as you get better with SPARQL, they are a great tool to slice data.</p>
+<p>Another way to discover linked data is <a href="https://spex.zazuko.com/#/?url=https%3A%2F%2Fld.stadt-zuerich.ch%2Fquery&amp;graph=https%3A%2F%2Flindas.admin.ch%2Fstadtzuerich%2Fstat%2Fviews&amp;prefixes=wdt%3Ahttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F&amp;forceIntrospection=false">SPEX</a>, a web based tool that visualizes the structure of a linked data source.</p>
 <p><div align="center"><h3>SPEX</h3></div>
 <img src="img/spex.png" width="600"/></p>
 
