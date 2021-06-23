@@ -43,7 +43,7 @@ jobs:
             html/README.md
 
       - name: Configure CNAME
-        run: echo jupyter-test.zazuko.com > html/CNAME
+        run: echo jupyter.zazuko.com > html/CNAME
 
       - name: Clean html directory
         run: rm -f html/README.md
