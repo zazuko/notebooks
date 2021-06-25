@@ -1,0 +1,16 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "[Zürich Statistical Office](https://www.stadt-zuerich.ch/prd/en/index/statistik.html) collects and publishes statistical information from all areas of life. That includes demographics, economy, construction, residency and politics. Corresponding datasets are publised as [Linked Data](https://en.wikipedia.org/wiki/Linked_data).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "sass styles/main.scss styles/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.35.1"
+  }
+}

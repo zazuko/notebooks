@@ -1,0 +1,94 @@
+.home-group-block {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $default-l-margin;
+  padding-top: $default-l-margin;
+
+  @media screen and (max-width: $mq-m) {
+    grid-gap: $default-m-margin;
+  }
+
+  @media screen and (max-width: $mq-s) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .home-block-item {
+    position: relative;
+    padding: $default-l-margin;
+    background: $bck-light;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .2);
+    overflow: hidden;
+
+    @media screen and (max-width: $mq-s) {
+      top: -80px;
+    }
+
+    &.no-padding {
+      padding: 0;
+    }
+
+    &:nth-child(odd) {
+      top: -80px;
+    }
+  }
+
+  h2 {
+    margin-bottom: $default-m-margin;
+    font-size: $fs-title;
+    line-height: $fs-title;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    filter: grayscale(100%);
+    border-radius: 2px;
+  }
+
+  p:not(:nth-child(2)) {
+    margin-top: 10px;
+  }
+
+  a {
+    color: $color-secondary;
+  }
+
+  h2 a {
+    text-decoration: none;
+  }
+
+  .home-block-item > .button {
+    position: relative;
+    display: inline-block;
+    color: $color-secondary;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: all linear 200ms;
+
+    &:after {
+      display: inline-block;
+      content: '→';
+      padding-left: 6px;
+      transition: all linear 200ms;
+    }
+
+    &:hover, &:focus {
+      color: $color-secondary-h;
+
+      &:after {
+        padding-left: 12px;
+      }
+    }
+  }
+
+  .inverted {
+    background: $bck-dark;
+    color: rgba(255, 255, 255, .95);
+
+    .button {
+      color: white;
+    }
+  }
+}
