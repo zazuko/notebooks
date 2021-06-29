@@ -131,3 +131,4 @@ dmypy.json
 .vscode
 
 html/img/
+html/*.html
