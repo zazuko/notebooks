@@ -95,3 +95,7 @@ body {
 #notebook-container h1 {
   text-transform: uppercase;
 }
+
+#notebook-container a {
+  color: #ff441c;
+}
