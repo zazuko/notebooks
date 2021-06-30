@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,600">
 
-<title>data_model</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Data Model</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13592,7 +13592,7 @@ div#notebook {
         <a href="https://zazuko.com/get-started" class="router-link-active">
           Back to get-started
         </a>
-        <h1>data_model</h1>
+        <h1>Data Model</h1>
       </div>
     </div>
   </div>
@@ -13651,12 +13651,12 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="c">#Params</span>
-<span class="err">%endpoint</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="err">ld</span><span class="p">.</span><span class="err">stadt</span><span class="o">-</span><span class="err">zuerich</span><span class="p">.</span><span class="err">ch</span><span class="o">/</span><span class="err">query</span>
-<span class="err">%auth</span> <span class="err">basic</span> <span class="err">public</span> <span class="err">public</span>
-<span class="err">%display</span> <span class="err">table</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="c">#Params</span>
+<span class="x">%endpoint https://ld.stadt-zuerich.ch/query</span>
+<span class="x">%auth basic public public</span>
+<span class="x">%display table</span>
 
-<span class="err">%show</span> <span class="mi">50</span>
+<span class="x">%show 50</span>
 </pre></div>
 
     </div>
@@ -13695,7 +13695,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="c"># List graphs in endpoint</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="c"># List graphs in endpoint</span>
 <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?graphs</span> 
 <span class="k">WHERE</span> <span class="p">{</span>
   <span class="k">GRAPH</span> <span class="nv">?graphs</span> <span class="p">{</span>
@@ -13762,7 +13762,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="c"># List random triples in the graph</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="c"># List random triples in the graph</span>
 
 <span class="k">SELECT</span> <span class="o">*</span>
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
@@ -13831,7 +13831,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="c"># List all data cubes</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="c"># List all data cubes</span>
 
 <span class="k">SELECT</span> <span class="nv">?cubes</span>
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
@@ -13876,7 +13876,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="c"># Cube properties</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="c"># Cube properties</span>
 
 <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?properties</span>
 <span class="k">FROM</span> <span class="nl">&lt;https://lindas.admin.ch/stadtzuerich/stat&gt;</span>
@@ -13921,7 +13921,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 
 <span class="k">SELECT</span> <span class="o">*</span>
@@ -14060,7 +14060,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="c"># List all observations in a cube</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="c"># List all observations in a cube</span>
 
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
@@ -14109,7 +14109,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="c"># Count observations in a data cube</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="c"># Count observations in a data cube</span>
 
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
@@ -14168,7 +14168,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="c"># Observation properties</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="c"># Observation properties</span>
 
 <span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
@@ -14226,7 +14226,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 
 <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?obsProperty</span> <span class="nv">?label</span> <span class="nv">?description</span> 
@@ -14313,7 +14313,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">property</span><span class="p">:</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/property/&gt;</span>
 
@@ -14412,7 +14412,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">property</span><span class="p">:</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/property/&gt;</span>
 
@@ -14520,7 +14520,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 
 <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?obsProperty</span> <span class="nv">?label</span> <span class="nv">?description</span> 
@@ -14589,7 +14589,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">property</span><span class="p">:</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/property/&gt;</span>
 
@@ -14630,7 +14630,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">property</span><span class="p">:</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/property/&gt;</span>
 
@@ -14685,7 +14685,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">property</span><span class="p">:</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/property/&gt;</span>
 
@@ -14722,7 +14722,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">property</span><span class="p">:</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/property/&gt;</span>
 
@@ -14757,7 +14757,7 @@ Let's query all observations in <code>&lt;https://ld.stadt-zuerich.ch/statistics
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-sparql"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
+<div class=" highlight hl-sparql-nb"><pre><span></span><span class="k">PREFIX</span> <span class="nn">schema</span><span class="p">:</span> <span class="nl">&lt;http://schema.org/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">cube</span><span class="p">:</span> <span class="nl">&lt;https://cube.link/&gt;</span>
 <span class="k">PREFIX</span> <span class="nn">property</span><span class="p">:</span> <span class="nl">&lt;https://ld.stadt-zuerich.ch/statistics/property/&gt;</span>
 
