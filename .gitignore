@@ -132,3 +132,4 @@ dmypy.json
 
 html/img/
 html/*.html
+!html/index.html
