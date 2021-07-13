@@ -16,6 +16,7 @@ graphly = {git = "https://github.com/zazuko/graphly.git", rev = "main"}
 plotly-geo = "^1.0.0"
 Shapely = "1.6.3"
 seaborn = "^0.11.1"
+folium = "^0.12.1"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^20.8b1", allow-prereleases = true}
