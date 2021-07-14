@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "ssz"
+name = "notebooks"
 version = "0.1.0"
-description = "Quary and visualize different dimensions in datasets from Zurich Statistics Office"
+description = "Notebooks using linked data"
 authors = ["Magdalena Surówka"]
 
 [tool.poetry.dependencies]
@@ -13,9 +13,6 @@ plotly = "^4.14.3"
 mapclassify = "^2.4.2"
 pandas = "^1.2.4"
 graphly = {git = "https://github.com/zazuko/graphly.git", rev = "main"}
-plotly-geo = "^1.0.0"
-Shapely = "1.6.3"
-seaborn = "^0.11.1"
 folium = "^0.12.1"
 
 [tool.poetry.dev-dependencies]
