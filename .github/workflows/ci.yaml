@@ -34,19 +34,8 @@ jobs:
       - name: Build HTML version of the notebook
         run: ./run.sh
 
-      - name: Convert README.md to index.html
-        uses: docker://pandoc/core:2.9
-        with:
-          args: >-
-            --standalone
-            --output=html/index.html
-            html/README.md
-
       - name: Configure CNAME
         run: echo jupyter.zazuko.com > html/CNAME
-
-      - name: Clean html directory
-        run: rm -f html/README.md
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
