@@ -1,6 +1,6 @@
 # Linked Data by Zazuko
 
-[Zazuko](http://zazuko.com/) collects and publishes data from all areas of life. That includes demographics, economy, environment and politics. Corresponding datasets are published as [Linked Data](https://en.wikipedia.org/wiki/Linked_data).
+[Zazuko](http://zazuko.com/) works with data from all areas of life, for example data on demographics, the economy, the environment and politics. These datasets are published as [Linked Data](https://en.wikipedia.org/wiki/Linked_data).
 
 These tutorials show **how to work with Linked Data**. They will guide you to working with SPAQRL directly in python. We recommend them to people who would like to:
 
