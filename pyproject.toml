@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "notebooks"
+name = "sparql-notebooks"
 version = "0.1.0"
 description = "Notebooks using linked data"
 authors = ["Magdalena Surówka"]
