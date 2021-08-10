@@ -4,4 +4,5 @@ matplotlib~=3.4.2
 plotly~=4.14.3
 mapclassify~=2.4.2
 pandas~=1.2.4
+folium~=0.12.1
 git+https://github.com/zazuko/graphly.git
