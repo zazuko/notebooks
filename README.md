@@ -33,12 +33,12 @@ These datasets are published together with various Swiss organizations.
 Available tutorials are:
 
 ### Zürich Statistical Office:
-* [Data model](notebooks/statistics-zurich/data_model.ipynb)
-* [Population](notebooks/statistics-zurich/population.ipynb)
-* [Real estate](notebooks/statistics-zurich/real_estate.ipynb)
-* [Economy](notebooks/statistics-zurich/economy.ipynb)
+* [Data model](notebooks/statistics_zurich/data_model.ipynb)
+* [Population](notebooks/statistics_zurich/population.ipynb)
+* [Real estate](notebooks/statistics_zurich/real_estate.ipynb)
+* [Economy](notebooks/statistics_zurich/economy.ipynb)
 
 ### Federal Electricity Commission - ElCom:
 
-* [Electricity prices](notebooks/electricity-prices/electricity_prices.ipynb)
+* [Electricity prices](notebooks/electricity_prices/electricity_prices.ipynb)
 
