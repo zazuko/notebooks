@@ -130,6 +130,6 @@ dmypy.json
 
 .vscode
 
-html/
-
-!index.html
+html/*.html
+!html/index.html
+html/img/
