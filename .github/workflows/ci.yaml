@@ -28,11 +28,14 @@ jobs:
         with:
           poetry-version: 1.1.6
 
+      - name: Disable Poetry virtualenvs
+        run: poetry config settings.virtualenvs.create false
+
       - name: Install dependencies
         run: poetry install
 
       - name: Install zazuko kernel
-        run: python -m ipykernel install --user --name=zazuko
+        run: python -m ipykernel install --name=zazuko
 
       - name: Build HTML version of the notebook
         run: ./run.sh
