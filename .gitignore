@@ -133,3 +133,5 @@ dmypy.json
 html/*.html
 !html/index.html
 html/img/
+
+!.github/workflows/ci.yaml
