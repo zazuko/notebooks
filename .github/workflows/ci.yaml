@@ -37,6 +37,9 @@ jobs:
       - name: Install zazuko kernel
         run: python -m ipykernel install --user --name=zazuko
 
+      - name: Install SPARQL kernel
+        run: jupyter sparqlkernel install --user zazuko
+
       - name: Build HTML version of the notebook
         run: ./run.sh
 
