@@ -35,7 +35,7 @@ jobs:
         run: poetry install
 
       - name: Install zazuko kernel
-        run: python -m ipykernel install --name=zazuko
+        run: python -m ipykernel install --user --name=zazuko
 
       - name: Build HTML version of the notebook
         run: ./run.sh
