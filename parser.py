@@ -90,7 +90,9 @@ def parse_notebook(notebook: JupyterNotebook) -> tuple[list[str], list[str]]:
 
 notebooks = get_notebooks_path("notebooks")
 
-path = notebooks[2]
+path = notebooks[3]
+
+
 with open(path) as f:
     data = json.load(f)
 
@@ -98,10 +100,19 @@ clients, queries = parse_notebook(data)
 # pp.pprint(clients[0])
 print(repr(queries[0]))
 
-endpoint = clients[0]
-sparql = SparqlClient(endpoint)
-df = sparql.send_query(queries[0])
-print(df.shape[0] > 0)
+# endpoint = clients[0]
+# sparql = SparqlClient(endpoint)
+# df = sparql.send_query(queries[0])
+# print(df.shape[0] > 0)
+
+print(path)
+with open("queries.py", "w+") as file:
+
+    for client in clients:
+        file.write(client + "\n\n")
+
+    for query in queries:
+        file.write(query + "\n\n")
 
 
 # TODO: add special treatment for SPARQL notebooks
