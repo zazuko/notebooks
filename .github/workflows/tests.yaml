@@ -2,7 +2,7 @@ name: Test SPARQL queries
 
 on:
   schedule:
-    - cron: "9 12 * * *"
+    - cron: "15 12 * * *"
 
 jobs:
   docker:
@@ -31,6 +31,6 @@ jobs:
         run: poetry install
 
       - name: Run tests
-        run: pytest
+        run: pytest --disable-warnings
 
 
