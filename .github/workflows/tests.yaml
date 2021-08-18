@@ -2,7 +2,7 @@ name: Test SPARQL queries
 
 on:
   schedule:
-    - cron "7 12 * * *"
+    - cron: "9 12 * * *"
 
 jobs:
   docker:
