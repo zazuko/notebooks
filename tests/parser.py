@@ -127,8 +127,9 @@ def get_testcases_from_python_cells(
 
         if 'query = """' in cell:
             query = re.search(r'query = """(.*?)"""', cell, flags=re.DOTALL).group(1)
-            alias = re.search(r"= (.*?).send_query", cell).group(1)
-            testcases[alias2endpoint[alias]]["queries"].append(query)
+            if not re.match(r'query = """(.*?)""".format', cell, flags=re.DOTALL):
+                alias = re.search(r"= (.*?).send_query", cell).group(1)
+                testcases[alias2endpoint[alias]]["queries"].append(query)
 
     return testcases
 

@@ -42,9 +42,7 @@
         }
     },
     "https://query.wikidata.org/sparql": {
-        "queries": [
-            "\nSELECT * WHERE {{\n  ?wikidata_iri wdt:P31 wd:Q19644586;       # All objects being \"statistical neighbourhoods of Zurich\"\n                p:P625/ps:P625 ?geometry.   # Their coordinates\n\n  FILTER(?wikidata_iri IN({}))\n}}\n"
-        ],
+        "queries": [],
         "prefixes": {}
     },
     "https://lindas.admin.ch/query": {
@@ -55,8 +53,7 @@
             "\nSELECT ?municipality_id ?category ?energy ?grid ?aidfee (?community_fees + ?aidfee as ?taxes) ?fixcosts ?variablecosts \nFROM <https://lindas.admin.ch/elcom/electricityprice>\nWHERE {\n    <https://energy.ld.admin.ch/elcom/electricityprice/observation/> cube:observation ?observation.\n    \n    ?observation\n      elcom:category/schema:name ?category;\n      elcom:municipality ?municipality_id;\n      elcom:period \"2020\"^^<http://www.w3.org/2001/XMLSchema#gYear>;\n      elcom:product <https://energy.ld.admin.ch/elcom/electricityprice/product/standard>;\n      elcom:fixcosts ?fixcosts;\n      elcom:total ?variablecosts;\n      elcom:gridusage ?grid;\n      elcom:energy ?energy;\n      elcom:charge ?community_fees;\n      elcom:aidfee ?aidfee.\n      \n}\nORDER BY ?muncipality ?category ?variablecosts\n",
             "\nSELECT DISTINCT ?category ?description\nWHERE {\n  GRAPH <https://lindas.admin.ch/elcom/electricityprice> {\n    \n    ?s <https://energy.ld.admin.ch/elcom/electricityprice/dimension/category> ?category_uri.\n    ?category_uri schema:name ?category .\n    ?category_uri schema:description ?description .\n  }\n}\nORDER BY ?category\n",
             "\nPREFIX cube: <https://cube.link/>\nPREFIX elcom: <https://energy.ld.admin.ch/elcom/electricityprice/dimension/>\nPREFIX schema: <http://schema.org/>\n\nSELECT ?municipality_id (MAX(?providers) AS ?providers)\nFROM <https://lindas.admin.ch/elcom/electricityprice>\nWHERE {\n  SELECT ?municipality_id ?category (COUNT(*) AS ?providers)\n\n  WHERE {\n      <https://energy.ld.admin.ch/elcom/electricityprice/observation/> cube:observation ?observation.\n\n      ?observation\n        elcom:category/schema:name ?category;\n        elcom:municipality ?municipality_id;\n        elcom:period \"2020\"^^<http://www.w3.org/2001/XMLSchema#gYear>;\n        elcom:product <https://energy.ld.admin.ch/elcom/electricityprice/product/standard>;\n        elcom:energy ?energy.\n  }\n  GROUP BY ?municipality_id ?category\n  HAVING (COUNT(*) > 1)\n}\nGROUP BY ?municipality_id\n",
-            "\nSELECT ?company ?type ?company_iri\nWHERE {\n    ?company_iri a admin:ZefixOrganisation.\n    ?company_iri schema:legalName ?company.\n    ?company_iri admin:municipality <https://ld.admin.ch/municipality/3695>.\n    ?company_iri schema:additionalType/schema:name ?type .\n  \n  FILTER(LANG(?type) = \"de\")\n}\nORDER BY ?type ?company\n",
-            "\nSELECT ?municipality ?company ?company_iri \nWHERE {{\n    ?company_iri a admin:ZefixOrganisation.\n    ?company_iri schema:legalName ?company.\n    ?company_iri admin:municipality ?municipality_iri.\n    ?company_iri schema:additionalType <https://ld.admin.ch/ech/97/legalforms/0106> .\n  \n  ?municipality_iri schema:name ?municipality.\n  \n  FILTER(?municipality_iri IN({}))\n  \n}}\nORDER BY ?municipality ?company\n"
+            "\nSELECT ?company ?type ?company_iri\nWHERE {\n    ?company_iri a admin:ZefixOrganisation.\n    ?company_iri schema:legalName ?company.\n    ?company_iri admin:municipality <https://ld.admin.ch/municipality/3695>.\n    ?company_iri schema:additionalType/schema:name ?type .\n  \n  FILTER(LANG(?type) = \"de\")\n}\nORDER BY ?type ?company\n"
         ],
         "prefixes": {
             "schema": "<http://schema.org/>",

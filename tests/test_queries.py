@@ -15,18 +15,23 @@ class EndpointTest(TypedDict):
     queries: list[str]
 
 
-"""
-class Test_SSZ_queries:
+class Test_ssz_queries:
     @classmethod
     def setup_class(cls):
 
         cls.endpoint = "https://ld.integ.stadt-zuerich.ch/query"
         cls.client = SparqlClient(cls.endpoint, timeout=30)
-        cls.client.add_prefixes(testcases[cls.endpoint])
+        cls.client.add_prefixes(testcases[cls.endpoint]["prefixes"])
+
+    def test_endpoint(self):
+
+        query = "SELECT * WHERE {?s ?p ?o} LIMIT 3"
+        df = self.client.send_query(query)
+        assert df.shape[0] == 3
 
     test_data = testcases["https://ld.integ.stadt-zuerich.ch/query"]["queries"]
 
-    @pytest.mark.parametrize("query", test_data[0:1])
+    @pytest.mark.parametrize("query", test_data)
     def test_queries(self, query):
 
         df = self.client.send_query(query)
@@ -39,11 +44,17 @@ class Test_lindas_queries:
 
         cls.endpoint = "https://lindas.admin.ch/query"
         cls.client = SparqlClient(cls.endpoint, timeout=30)
-        cls.client.add_prefixes(testcases[cls.endpoint])
+        cls.client.add_prefixes(testcases[cls.endpoint]["prefixes"])
+
+    def test_endpoint(self):
+
+        query = "SELECT * WHERE {?s ?p ?o} LIMIT 3"
+        df = self.client.send_query(query)
+        assert df.shape[0] == 3
 
     test_data = testcases["https://lindas.admin.ch/query"]["queries"]
 
-    @pytest.mark.parametrize("query", test_data[0:1])
+    @pytest.mark.parametrize("query", test_data)
     def test_queries(self, query):
 
         df = self.client.send_query(query)
@@ -56,16 +67,21 @@ class Test_geoadmin_queries:
 
         cls.endpoint = "https://ld.geo.admin.ch/query"
         cls.client = SparqlClient(cls.endpoint, timeout=30)
-        cls.client.add_prefixes(testcases[cls.endpoint])
+        cls.client.add_prefixes(testcases[cls.endpoint]["prefixes"])
+
+    def test_endpoint(self):
+
+        query = "SELECT * WHERE {?s ?p ?o} LIMIT 3"
+        df = self.client.send_query(query)
+        assert df.shape[0] == 3
 
     test_data = testcases["https://ld.geo.admin.ch/query"]["queries"]
 
-    @pytest.mark.parametrize("query", test_data[0:1])
+    @pytest.mark.parametrize("query", test_data)
     def test_queries(self, query):
 
         df = self.client.send_query(query)
         assert df.shape[0] > 0
-"""
 
 
 class Test_wikidata_queries:
@@ -74,13 +90,12 @@ class Test_wikidata_queries:
 
         cls.endpoint = "https://query.wikidata.org/sparql"
         cls.client = SparqlClient(cls.endpoint, timeout=30)
-        cls.client.add_prefixes(testcases[cls.endpoint])
+        cls.client.add_prefixes(testcases[cls.endpoint]["prefixes"])
 
     test_data = testcases["https://query.wikidata.org/sparql"]["queries"]
 
-    @pytest.mark.parametrize("query", test_data[0:1])
+    @pytest.mark.parametrize("query", test_data)
     def test_queries(self, query):
 
-        # print(repr(query))
-        df = self.client.send_query("SELECT * WHERE {?S ?P ?O} LIMIT 2")
+        df = self.client.send_query(query)
         assert df.shape[0] > 0
