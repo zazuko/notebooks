@@ -98,8 +98,8 @@ div#notebook-container{
   <div class="default-header">
     <div class="layout-width">
       <div class="header-content">
-        <a href="https://zazuko.com/get-started/python/" class="router-link-active">
-          Back to Python developers
+        <a href="https://zazuko.com/get-started/" class="router-link-active">
+          Back to Use Cases
         </a>
         <h1>{{nb_title}}</h1>
       </div>
@@ -114,6 +114,31 @@ div#notebook-container{
 {% block body_footer %}
     </div>
   </div>
+  <script>
+    function collapseCode() {
+      const codeParts = document.getElementsByClassName("input");
+      [...codeParts].forEach((part) => {
+        part.style.display = "none";
+        const btn = document.createElement("BUTTON");
+        btn.innerHTML = "Show Code";
+        btn.style.marginLeft = "14ex";
+        part.parentElement.insertBefore(btn, part);
+        btn.addEventListener("click", toggle);
+      });
+    }
+
+    function toggle() {
+      if (this.nextElementSibling.style.display === "none") {
+        this.nextElementSibling.style.display = "flex";
+        this.innerHTML = "Collapse Code";
+      } else {
+        this.nextElementSibling.style.display = "none";
+        this.innerHTML = "Show Code";
+      }
+    }
+
+    collapseCode();
+  </script>
 </body>
 {% endblock body_footer %}
 
