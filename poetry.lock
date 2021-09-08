@@ -304,7 +304,7 @@ dev = ["pytest", "pytest-cov"]
 type = "git"
 url = "https://github.com/zazuko/graphly.git"
 reference = "main"
-resolved_reference = "480d2714487b3c4264503a72f0060713de647265"
+resolved_reference = "3e53d57d246eef6f586ecc442d51ad51b86c8f61"
 
 [[package]]
 name = "idna"
