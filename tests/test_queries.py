@@ -26,7 +26,7 @@ class Test_ssz_queries:
     def test_endpoint(self):
 
         query = "SELECT * WHERE {?s ?p ?o} LIMIT 3"
-        df = self.client.send_query(query)
+        df = self.client.send_query(query, timeout=None)
         assert df.shape[0] == 3
 
     test_data = testcases["https://ld.integ.stadt-zuerich.ch/query"]["queries"]
@@ -49,7 +49,7 @@ class Test_lindas_queries:
     def test_endpoint(self):
 
         query = "SELECT * WHERE {?s ?p ?o} LIMIT 3"
-        df = self.client.send_query(query)
+        df = self.client.send_query(query, timeout=None)
         assert df.shape[0] == 3
 
     test_data = testcases["https://lindas.admin.ch/query"]["queries"]
@@ -72,7 +72,7 @@ class Test_geoadmin_queries:
     def test_endpoint(self):
 
         query = "SELECT * WHERE {?s ?p ?o} LIMIT 3"
-        df = self.client.send_query(query)
+        df = self.client.send_query(query, timeout=None)
         assert df.shape[0] == 3
 
     test_data = testcases["https://ld.geo.admin.ch/query"]["queries"]
