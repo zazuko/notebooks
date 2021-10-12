@@ -18,6 +18,7 @@ networkx = "^2.6.2"
 pygraphviz = "^1.7"
 pyvis = "^0.1.9"
 bokeh = "^2.3.3"
+holoviews = "^1.14.6"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^20.8b1", allow-prereleases = true}
