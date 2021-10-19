@@ -130,4 +130,9 @@ dmypy.json
 
 .vscode
 
-html/
+html/*.html
+!html/index.html
+!html/sbb.html
+html/img/
+
+!.github/workflows/ci.yaml

@@ -5,7 +5,7 @@ description = "Notebooks using linked data"
 authors = ["Magdalena Surówka"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 ipykernel = "^5.3.4"
 sparqlkernel ="^1.3.0"
 matplotlib = "^3.4.2"
@@ -15,14 +15,12 @@ graphly = {git = "https://github.com/zazuko/graphly.git", rev = "main"}
 folium = "^0.12.1"
 plotly = "^5.1.0"
 networkx = "^2.6.2"
-pygraphviz = "^1.7"
-pyvis = "^0.1.9"
 bokeh = "^2.3.3"
-holoviews = "^1.14.6"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^20.8b1", allow-prereleases = true}
 jupyter-contrib-nbextensions = "^0.5.1"
+pytest = "^6.2.4"
 
 [build-system]
 requires = ["poetry>=0.12"]

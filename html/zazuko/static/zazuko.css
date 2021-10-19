@@ -1,0 +1,101 @@
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  background: #fff;
+  padding: 0;
+}
+
+.topbar-container {
+  background: #ffb15e;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.layout-width {
+  width: 1200px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1280px) {
+  .layout-width {
+    width: 100%;
+    padding: 0 40px;
+  }
+}
+
+.topbar-container .topbar {
+  display: flex;
+}
+
+.topbar-container .topbar-logo {
+  margin-right: auto;
+}
+
+.topbar-container .logo {
+  display: inline-block;
+  position: relative;
+  padding: 0 30px;
+  line-height: 100px;
+  margin-right: 40px;
+}
+
+.topbar-container .logo::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  background: #fcfcfc;
+}
+
+.topbar-container .logo img {
+  position: relative;
+  top: -2px;
+  width: 140px;
+  display: inline;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.default-header {
+  background: #fcfcfc;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.default-header .header-content {
+  padding: 100px;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .default-header .header-content {
+    padding: 100px 20px;
+  }
+}
+
+.default-header .header-content a {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+}
+
+.default-header .header-content h1 {
+  font-size: 50px;
+  line-height: 50px;
+  font-family: Playfair Display, serif;
+  font-weight: 700;
+  margin-top: 18px;
+  margin-bottom: 9px;
+}
+
+#notebook-container h1 {
+  text-transform: uppercase;
+}
+
+#notebook-container a {
+  color: #ff441c;
+}
