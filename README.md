@@ -42,3 +42,8 @@ Available tutorials are:
 
 * [Electricity prices](notebooks/electricity_prices/electricity_prices.ipynb)
 
+
+### Federal Office for Agriculture:
+
+* [Animal diseases](notebooks/animal_disease/epidemics.ipynb)
+
