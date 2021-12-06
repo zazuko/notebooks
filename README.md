@@ -45,5 +45,7 @@ Available tutorials are:
 
 ### Federal Office for Agriculture:
 
-* [Animal diseases](notebooks/animal_disease/epidemics.ipynb)
+* [Animal epidemics](notebooks/animal_disease/epidemics.ipynb)
+
+
 
