@@ -2,6 +2,11 @@
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
+{ "type": "Feature", "properties": { "address": "Via Motta, 6830 Chiasso, Switzerland" }, "geometry": { "type": "Point", "coordinates": [ 9.028989, 45.8333856 ] } },
+{ "type": "Feature", "properties": { "address": "Avenue Charles-Ferdinand-Ramuz, 1009 Pully, Switzerland" }, "geometry": { "type": "Point", "coordinates": [ 6.6589386, 46.5103082 ] } },
+{ "type": "Feature", "properties": { "address": "boulevard de Saint-Georges, 1205 Genève, Switzerland" }, "geometry": { "type": "Point", "coordinates": [ 6.1386319, 46.2014046 ] } },
+{ "type": "Feature", "properties": { "address": "Zentralstrasse, 5610 Wohlen AG, Switzerland" }, "geometry": { "type": "Point", "coordinates": [ 8.2747956, 47.3498514 ] } },
+{ "type": "Feature", "properties": { "address": "Ringstrasse, 7000 Chur, Switzerland" }, "geometry": { "type": "Point", "coordinates": [ 9.5210775, 46.8575096 ] } },
 { "type": "Feature", "properties": { "address": "Chamerstrasse, 6331 Hünenberg, Switzerland" }, "geometry": { "type": "Point", "coordinates": [ 8.4261702, 47.1726856 ] } },
 { "type": "Feature", "properties": { "address": "Fraumünsterstrasse, 8001 Zürich, Switzerland" }, "geometry": { "type": "Point", "coordinates": [ 8.5406144, 47.3697142 ] } },
 { "type": "Feature", "properties": { "address": "Sonnenbergstrasse, 6052 Hergiswil NW, Switzerland" }, "geometry": { "type": "Point", "coordinates": [ 8.3116727, 46.9920708 ] } },
