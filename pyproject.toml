@@ -14,6 +14,7 @@ pandas = "^1.2.4"
 graphly = {git = "https://github.com/zazuko/graphly.git", rev = "main"}
 folium = "^0.12.1"
 plotly = "^5.1.0"
+geopy = "^2.2.0"
 networkx = "^2.6.2"
 bokeh = "^2.3.3"
 

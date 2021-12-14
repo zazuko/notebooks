@@ -1,4 +1,38 @@
 {
+    "https://int.lindas.admin.ch/query": {
+        "queries": [
+            "\nSELECT ?type (COUNT(DISTINCT ?company_iri) AS ?ccount)\nWHERE {\n    ?company_iri a admin:ZefixOrganisation.\n    ?company_iri schema:additionalType/schema:name ?type .\n  \n  FILTER(LANG(?type) = \"de\")\n}\nGROUP BY ?type\nORDER BY DESC(?ccount)\n",
+            "\nSELECT ?municipality ?muni_id (COUNT(?sub) AS ?companies)\nFROM <https://lindas.admin.ch/foj/zefix>\nFROM <https://lindas.admin.ch/territorial>\nWHERE {\n\t?sub a admin:ZefixOrganisation ;\n      admin:municipality ?muni_id.\n    ?muni_id schema:name ?municipality;\n} \nGROUP BY ?municipality ?muni_id\nORDER BY DESC(?companies)\n",
+            "\nSELECT ?street ?zip ?town (COUNT(?company) AS ?ccount)\nFROM <https://lindas.admin.ch/foj/zefix>\nWHERE {\n  ?company a <https://schema.ld.admin.ch/ZefixOrganisation>;\n           <http://schema.org/address> ?address.\n  \n  ?address <http://schema.org/streetAddress> ?street;\n           <http://www.w3.org/ns/locn#postCode> ?zip;\n           <http://www.w3.org/ns/locn#postName> ?town.\n}\nGROUP BY ?town ?zip ?street\nORDER BY DESC (?ccount)\nLIMIT 15\n",
+            "\nSELECT ?thoroughfare ?zip ?town (COUNT(?company) AS ?ccount)\nFROM <https://lindas.admin.ch/foj/zefix>\nWHERE {\n  ?company a <https://schema.ld.admin.ch/ZefixOrganisation>;\n           <http://schema.org/address> ?address.\n  \n  ?address <http://www.w3.org/ns/locn#thoroughfare> ?thoroughfare;\n           <http://www.w3.org/ns/locn#postCode> ?zip;\n           <http://www.w3.org/ns/locn#postName> ?town.\n}\nGROUP BY ?town ?zip ?thoroughfare\nHAVING (?ccount >= 100)\nORDER BY DESC (?ccount)\n",
+            "\nSELECT DISTINCT ?specie ?group\nWHERE {\n  ?s disease:animal-specie ?specieIRI.\n  ?specieIRI schema:name ?specie.\n  \n  ?specieIRI skos:broader/schema:name ?group.\n  \n  FILTER (LANG(?specie) = \"de\")\n  FILTER (LANG(?group) = \"de\")\n} \nORDER BY ?group\n",
+            "\nSELECT DISTINCT ?epidemics ?group\nWHERE {\n  ?s disease:epidemics ?epidemicsIRI.\n  ?epidemicsIRI schema:name ?epidemics.\n  \n  ?epidemicsIRI skos:broader/schema:name ?group.\n\n  FILTER (LANG(?epidemics) = \"de\")\n  FILTER (LANG(?group) = \"de\")\n}\nORDER BY ?group\n",
+            "\nSELECT DISTINCT ?epidemics ?specie ?group\nWHERE {\n  <https://environment.ld.admin.ch/foen/animal-pest/observation/> cube:observation ?obs .\n  ?obs disease:epidemics/schema:name ?epidemics;\n       disease:animal-specie ?specieIRI.\n       \n  ?specieIRI schema:name ?specie.\n  ?specieIRI skos:broader/schema:name ?group.\n  \n  FILTER (LANG(?epidemics) = \"de\")\n  FILTER (LANG(?specie) = \"de\")\n  FILTER (LANG(?group) = \"de\")\n} \n\nORDER BY ?specie\n",
+            "\nSELECT ?diagnosis ?commune ?specie ?stock ?sick ?infected ?killed ?deceased ?epidemics\nWHERE {\n  <https://environment.ld.admin.ch/foen/animal-pest/observation/> cube:observation ?obs .\n  ?obs disease:epidemics/schema:name ?epidemics;\n       disease:diagnosis-date ?diagnosis;\n       disease:animals-stock ?stock;\n       disease:animals-sick ?sick;\n       disease:animals-infected ?infected;\n       disease:animals-killed ?killed;\n       disease:animals-deceased ?deceased;\n       disease:internet-publication ?date;\n       disease:animal-specie/schema:name ?specie;\n       schema:containedInPlace/schema:name ?commune .\n  \n  FILTER (LANG(?epidemics) = \"de\")\n  FILTER (LANG(?specie) = \"de\")\n} \nORDER BY DESC(?diagnosis) ?commune\n",
+            "\nSELECT ?diagnosis ?municipality_id ?municipality ?specie ?epidemics\nWHERE {\n  <https://environment.ld.admin.ch/foen/animal-pest/observation/> cube:observation ?obs .\n  ?obs disease:epidemics/schema:name ?epidemics;\n       disease:diagnosis-date ?diagnosis;\n       disease:internet-publication ?date;\n       disease:animal-specie/schema:name ?specie;\n       schema:containedInPlace ?municipality_iri.\n       \n  ?municipality_iri schema:name ?municipality ;\n                    schema:identifier ?municipality_id.\n  \n  FILTER (LANG(?epidemics) = \"de\")\n  FILTER (LANG(?specie) = \"de\")\n} \nORDER BY DESC(?diagnosis) ?municipality\n"
+        ],
+        "prefixes": {
+            "schema": "<http://schema.org/>",
+            "admin": "<https://schema.ld.admin.ch/>",
+            "cube": "<https://cube.link/>",
+            "skos": "<http://www.w3.org/2004/02/skos/core#>",
+            "disease": "<https://environment.ld.admin.ch/foen/animal-pest/>"
+        }
+    },
+    "https://ld.geo.admin.ch/query": {
+        "queries": [
+            "    \nSELECT ?muni_id ?population ?boundary \n\nWHERE {\n  ?muni_iri dct:hasVersion ?version ;\n            geonames:featureCode geonames:A.ADM3 .\n  \n  ?version schema:validUntil \"2020-12-31\"^^<http://www.w3.org/2001/XMLSchema#date>;\n           geonames:population ?population;\n           geosparql:hasGeometry/geosparql:asWKT ?boundary.\n  \n  BIND(IRI(REPLACE(STR(?muni_iri), \"https://ld.geo.admin.ch/boundaries/\", \"https://ld.admin.ch/\")) AS ?muni_id)\n}\n",
+            "    \nSELECT ?municipality_id ?municipality ?population ?boundary \n\nWHERE {\n  ?muni_iri dct:hasVersion ?version ;\n            geonames:featureCode geonames:A.ADM3 .\n  \n  ?version schema:validUntil \"2020-12-31\"^^<http://www.w3.org/2001/XMLSchema#date>;\n           geonames:population ?population;\n           schema:name ?municipality;\n           geosparql:hasGeometry/geosparql:asWKT ?boundary.\n  \n  BIND(IRI(REPLACE(STR(?muni_iri), \"https://ld.geo.admin.ch/boundaries/\", \"https://ld.admin.ch/\")) AS ?municipality_id)\n}\n\n",
+            "    \nSELECT ?municipality_id ?municipality ?population ?boundary \n\nWHERE {\n  ?muni_iri dct:hasVersion ?version ;\n            geonames:featureCode geonames:A.ADM3 .\n  \n  ?version schema:validUntil \"2020-12-31\"^^<http://www.w3.org/2001/XMLSchema#date>;\n           geonames:population ?population;\n           schema:name ?municipality;\n           geosparql:hasGeometry/geosparql:asWKT ?boundary.\n  \n  BIND(IRI(REPLACE(STR(?muni_iri), \"https://ld.geo.admin.ch/boundaries/\", \"https://ld.admin.ch/\")) AS ?municipality_id)\n}\n\n",
+            "\nSELECT ?municipality_id ?municipality ?boundary \n\nWHERE {\n  ?muni_iri dct:hasVersion ?version ;\n            geonames:featureCode geonames:A.ADM3 .\n  \n  ?version schema:validUntil \"2020-12-31\"^^<http://www.w3.org/2001/XMLSchema#date>;\n           schema:name ?municipality;\n           geosparql:hasGeometry/geosparql:asWKT ?boundary.\n  \n  BIND(IRI(REPLACE(STR(?muni_iri), \"https://ld.geo.admin.ch/boundaries/\", \"https://ld.admin.ch/\")) AS ?municipality_id)\n}\n"
+        ],
+        "prefixes": {
+            "dct": "<http://purl.org/dc/terms/>",
+            "geonames": "<http://www.geonames.org/ontology#>",
+            "schema": "<http://schema.org/>",
+            "geosparql": "<http://www.opengis.net/ont/geosparql#>"
+        }
+    },
     "https://ld.integ.stadt-zuerich.ch/query": {
         "queries": [
             "\nSELECT ?time ?place ?count\nFROM <https://lindas.admin.ch/stadtzuerich/stat>\nWHERE {\n  ssz:BEW a cube:Cube;\n             cube:observationSet/cube:observation ?observation.   \n  \n  ?observation property:RAUM ?place_uri ;\n                       property:TIME ?time ;\n                       measure:BEW ?count .\n  ?place_uri skos:inScheme <https://ld.stadt-zuerich.ch/statistics/scheme/Kreis> ;\n         schema:name ?place .\n  FILTER regex(str(?place),\"ab|Stadtgebiet vor\")\n}\nORDER BY ?time\n",
@@ -60,35 +94,6 @@
             "cube": "<https://cube.link/>",
             "elcom": "<https://energy.ld.admin.ch/elcom/electricityprice/dimension/>",
             "admin": "<https://schema.ld.admin.ch/>"
-        }
-    },
-    "https://ld.geo.admin.ch/query": {
-        "queries": [
-            "    \nSELECT ?municipality_id ?municipality ?population ?boundary \n\nWHERE {\n  ?muni_iri dct:hasVersion ?version ;\n            geonames:featureCode geonames:A.ADM3 .\n  \n  ?version schema:validUntil \"2020-12-31\"^^<http://www.w3.org/2001/XMLSchema#date>;\n           geonames:population ?population;\n           schema:name ?municipality;\n           geosparql:hasGeometry/geosparql:asWKT ?boundary.\n  \n  BIND(IRI(REPLACE(STR(?muni_iri), \"https://ld.geo.admin.ch/boundaries/\", \"https://ld.admin.ch/\")) AS ?municipality_id)\n}\n\n",
-            "    \nSELECT ?municipality_id ?municipality ?population ?boundary \n\nWHERE {\n  ?muni_iri dct:hasVersion ?version ;\n            geonames:featureCode geonames:A.ADM3 .\n  \n  ?version schema:validUntil \"2020-12-31\"^^<http://www.w3.org/2001/XMLSchema#date>;\n           geonames:population ?population;\n           schema:name ?municipality;\n           geosparql:hasGeometry/geosparql:asWKT ?boundary.\n  \n  BIND(IRI(REPLACE(STR(?muni_iri), \"https://ld.geo.admin.ch/boundaries/\", \"https://ld.admin.ch/\")) AS ?municipality_id)\n}\n\n",
-            "\nSELECT ?municipality_id ?municipality ?boundary \n\nWHERE {\n  ?muni_iri dct:hasVersion ?version ;\n            geonames:featureCode geonames:A.ADM3 .\n  \n  ?version schema:validUntil \"2020-12-31\"^^<http://www.w3.org/2001/XMLSchema#date>;\n           schema:name ?municipality;\n           geosparql:hasGeometry/geosparql:asWKT ?boundary.\n  \n  BIND(IRI(REPLACE(STR(?muni_iri), \"https://ld.geo.admin.ch/boundaries/\", \"https://ld.admin.ch/\")) AS ?municipality_id)\n}\n"
-        ],
-        "prefixes": {
-            "dct": "<http://purl.org/dc/terms/>",
-            "geonames": "<http://www.geonames.org/ontology#>",
-            "schema": "<http://schema.org/>",
-            "geosparql": "<http://www.opengis.net/ont/geosparql#>"
-        }
-    },
-    "https://int.lindas.admin.ch/query": {
-        "queries": [
-            "\nSELECT DISTINCT ?specie ?group\nWHERE {\n  ?s disease:animal-specie ?specieIRI.\n  ?specieIRI schema:name ?specie.\n  \n  ?specieIRI skos:broader/schema:name ?group.\n  \n  FILTER (LANG(?specie) = \"de\")\n  FILTER (LANG(?group) = \"de\")\n} \nORDER BY ?group\n",
-            "\nSELECT DISTINCT ?epidemics ?group\nWHERE {\n  ?s disease:epidemics ?epidemicsIRI.\n  ?epidemicsIRI schema:name ?epidemics.\n  \n  ?epidemicsIRI skos:broader/schema:name ?group.\n\n  FILTER (LANG(?epidemics) = \"de\")\n  FILTER (LANG(?group) = \"de\")\n}\nORDER BY ?group\n",
-            "\nSELECT DISTINCT ?epidemics ?specie ?group\nWHERE {\n  <https://environment.ld.admin.ch/foen/animal-pest/observation/> cube:observation ?obs .\n  ?obs disease:epidemics/schema:name ?epidemics;\n       disease:animal-specie ?specieIRI.\n       \n  ?specieIRI schema:name ?specie.\n  ?specieIRI skos:broader/schema:name ?group.\n  \n  FILTER (LANG(?epidemics) = \"de\")\n  FILTER (LANG(?specie) = \"de\")\n  FILTER (LANG(?group) = \"de\")\n} \n\nORDER BY ?specie\n",
-            "\nSELECT ?diagnosis ?commune ?specie ?stock ?sick ?infected ?killed ?deceased ?epidemics\nWHERE {\n  <https://environment.ld.admin.ch/foen/animal-pest/observation/> cube:observation ?obs .\n  ?obs disease:epidemics/schema:name ?epidemics;\n       disease:diagnosis-date ?diagnosis;\n       disease:animals-stock ?stock;\n       disease:animals-sick ?sick;\n       disease:animals-infected ?infected;\n       disease:animals-killed ?killed;\n       disease:animals-deceased ?deceased;\n       disease:internet-publication ?date;\n       disease:animal-specie/schema:name ?specie;\n       schema:containedInPlace/schema:name ?commune .\n  \n  FILTER (LANG(?epidemics) = \"de\")\n  FILTER (LANG(?specie) = \"de\")\n} \nORDER BY DESC(?diagnosis) ?commune\n",
-            "\nSELECT ?diagnosis ?municipality_id ?municipality ?specie ?epidemics\nWHERE {\n  <https://environment.ld.admin.ch/foen/animal-pest/observation/> cube:observation ?obs .\n  ?obs disease:epidemics/schema:name ?epidemics;\n       disease:diagnosis-date ?diagnosis;\n       disease:internet-publication ?date;\n       disease:animal-specie/schema:name ?specie;\n       schema:containedInPlace ?municipality_iri.\n       \n  ?municipality_iri schema:name ?municipality ;\n                    schema:identifier ?municipality_id.\n  \n  FILTER (LANG(?epidemics) = \"de\")\n  FILTER (LANG(?specie) = \"de\")\n} \nORDER BY DESC(?diagnosis) ?municipality\n"
-        ],
-        "prefixes": {
-            "schema": "<http://schema.org/>",
-            "cube": "<https://cube.link/>",
-            "admin": "<https://schema.ld.admin.ch/>",
-            "skos": "<http://www.w3.org/2004/02/skos/core#>",
-            "disease": "<https://environment.ld.admin.ch/foen/animal-pest/>"
         }
     }
 }

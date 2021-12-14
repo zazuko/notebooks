@@ -7,4 +7,5 @@ pandas>=1.2.4
 folium>=0.12.1
 networkx>=2.6.2
 bokeh>=2.3.3
+geopy>=2.2.0
 git+https://github.com/zazuko/graphly.git
