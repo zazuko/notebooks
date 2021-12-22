@@ -5,7 +5,7 @@ on:
     - cron: '23 */4 * * *'
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   docker:
