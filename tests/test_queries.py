@@ -19,7 +19,7 @@ class Test_ssz_queries:
     @classmethod
     def setup_class(cls):
 
-        cls.endpoint = "https://ld.integ.stadt-zuerich.ch/query"
+        cls.endpoint = "https://ld.stadt-zuerich.ch/query"
         cls.client = SparqlClient(cls.endpoint, timeout=30)
         cls.client.add_prefixes(testcases[cls.endpoint]["prefixes"])
 
@@ -29,7 +29,7 @@ class Test_ssz_queries:
         df = self.client.send_query(query, timeout=None)
         assert df.shape[0] == 3
 
-    test_data = testcases["https://ld.integ.stadt-zuerich.ch/query"]["queries"]
+    test_data = testcases["https://ld.stadt-zuerich.ch/query"]["queries"]
 
     @pytest.mark.parametrize("query", test_data)
     def test_queries(self, query):
@@ -38,6 +38,7 @@ class Test_ssz_queries:
         assert df.shape[0] > 0
 
 
+@pytest.mark.skip(reason="Skip lindas")
 class Test_lindas_queries:
     @classmethod
     def setup_class(cls):
@@ -61,6 +62,7 @@ class Test_lindas_queries:
         assert df.shape[0] > 0
 
 
+@pytest.mark.skip(reason="Skip geoadmin")
 class Test_geoadmin_queries:
     @classmethod
     def setup_class(cls):
