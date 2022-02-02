@@ -34,7 +34,7 @@
             "geosparql": "<http://www.opengis.net/ont/geosparql#>"
         }
     },
-    "https://ld.integ.stadt-zuerich.ch/query": {
+    "https://ld.stadt-zuerich.ch/query": {
         "queries": [
             "\nSELECT ?time ?place ?count\nFROM <https://lindas.admin.ch/stadtzuerich/stat>\nWHERE {\n  ssz:BEW a cube:Cube;\n             cube:observationSet/cube:observation ?observation.   \n  \n  ?observation property:RAUM ?place_uri ;\n                       property:TIME ?time ;\n                       measure:BEW ?count .\n  ?place_uri skos:inScheme <https://ld.stadt-zuerich.ch/statistics/scheme/Kreis> ;\n         schema:name ?place .\n  FILTER regex(str(?place),\"ab|Stadtgebiet vor\")\n}\nORDER BY ?time\n",
             "\nSELECT ?time (SUM(?pop_count) AS ?pop) (SUM(?foreigners_count)/SUM(?pop_count) AS ?foreigners) \nFROM <https://lindas.admin.ch/stadtzuerich/stat>\nWHERE {\n  ssz:BEW a cube:Cube;\n             cube:observationSet/cube:observation ?obs_bew.   \n  ?obs_bew property:TIME ?time ;\n           property:RAUM ?place_uri;\n           measure:BEW ?pop_count .\n  \n  ssz:ANT-GGH-HEL a cube:Cube;\n             cube:observationSet/cube:observation ?obs_ant.   \n  \n  ?obs_ant property:TIME ?time ;\n           property:RAUM ?place_uri;\n           measure:ANT ?ratio .\n  \n  ?place_uri skos:inScheme <https://ld.stadt-zuerich.ch/statistics/scheme/Kreis> ;\n             schema:name ?place .\n  \n  BIND((?pop_count * ?ratio/100) AS ?foreigners_count)\n}\nGROUP BY ?time\nORDER BY ?time\n",
