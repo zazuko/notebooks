@@ -32,9 +32,9 @@ ideas: see `heavy_metal.ipynb`
     * metric (aparments/ppl/buildings)
 
 Exposition of ppl/flats/buildings to noise.
+- query: https://s.zazuko.com/4BYKK6
 
 All plots time series!
-
 Ideas:
 - trends in total noise (%ppl exposed to noise over time)
 - noise composition over time
@@ -45,6 +45,8 @@ Ideas:
 - noise exposition in rural and central areas
 
 Q: do we see the same in economic data?
+
+
 
 
 
