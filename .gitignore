@@ -4,7 +4,7 @@
 .ipynb_checkpoints
 venv
 
-html/*.html
+*.html
 !html/index.html
 !html/sbb.html
 html/img/
