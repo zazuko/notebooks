@@ -29,6 +29,8 @@ if "map" not in st.session_state:
         location=[46.837545, 8.197028], zoom_start=8.5, tiles="CartoDBdark_matter"
     )
 
+st.set_page_config(layout="wide")
+
 muni2id = load_data()
 add_selectbox = st.sidebar.selectbox(
     "What commune would you like to be visualize?",
@@ -41,7 +43,7 @@ st_data = st_folium(st.session_state.map)
 
 make_map_responsive = """
  <style>
- [title~="st.iframe"] { width: 100%}
+ [title~="streamlit_folium.st_folium"] { width: 100%}
  </style>
 """
 st.markdown(make_map_responsive, unsafe_allow_html=True)
