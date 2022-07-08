@@ -17,6 +17,8 @@ plotly = "^5.1.0"
 geopy = "^2.2.0"
 networkx = "^2.6.2"
 bokeh = "^2.3.3"
+streamlit = "^1.10.0"
+streamlit-folium = "^0.6.14"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^20.8b1", allow-prereleases = true}

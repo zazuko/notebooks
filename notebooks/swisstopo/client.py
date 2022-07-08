@@ -3,6 +3,7 @@ from graphly.api_client import SparqlClient
 
 class LindasClient(SparqlClient):
     def get_commune_centroid(self, municipality: str):
+
         query = """
         SELECT ?geom
         WHERE {{
@@ -26,6 +27,7 @@ class LindasClient(SparqlClient):
             ?municipality_id a <https://schema.ld.admin.ch/Municipality>;
                 <http://schema.org/name> ?municipality.
         }
+        ORDER BY ?municipality
         """
         df = self.send_query(query)
         return df
