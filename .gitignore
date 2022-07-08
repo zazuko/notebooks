@@ -8,5 +8,6 @@ venv
 !html/index.html
 !html/sbb.html
 html/img/
+__pycache__/
 
 !.github/workflows/ci.yaml
