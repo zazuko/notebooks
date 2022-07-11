@@ -1,5 +1,4 @@
 import os
-import time
 
 import dash_bootstrap_components as dbc
 from dash import Dash, Input, Output, dcc, html
@@ -40,46 +39,69 @@ controls = html.Div(
 app.layout = dbc.Container(
     [
         html.Div(
-            className="banner",
+            # className="banner",
             children=[
                 html.Div(
-                    className="container scalable",
+                    className="position-absolute top-0 start-50 translate-middle-x p-3",
                     children=[
-                        html.Div(
-                            id="banner-title",
-                            children=[
-                                html.H2(
-                                    "Where are most companies registered?",
-                                    id="title",
-                                    style={"text-align": "center"},
-                                )
-                            ],
+                        html.H2(
+                            "Where are most companies registered?",
+                            id="title",
+                            style={"text-align": "center", "color": "#dddddd"},
                         ),
-                        # html.Div(
-                        #     id="banner-logo",
-                        #     children=[
-                        #         html.A(
-                        #             id="logo",
-                        #             children=[
-                        #                 html.Img(
-                        #                     src="https://zazuko.com/logo/zazuko-logo.svg"
-                        #                 )
-                        #             ],
-                        #             href="https://zazuko.com",
-                        #             style={"display": "inline-flex"},
-                        #         )
-                        #     ],
-                        # ),
                     ],
                 )
+                # html.Div(
+                #     className="container scalable",
+                #     children=[
+                #         html.Div(
+                #             id="banner-title",
+                #             children=[
+                #                 html.H2(
+                #                     "Where are most companies registered?",
+                #                     id="title",
+                #                     style={"text-align": "center"},
+                #                 )
+                #             ],
+                #         ),
+                #         html.Div(
+                #             id="banner-logo",
+                #             children=[
+                #                 html.A(
+                #                     id="logo",
+                #                     children=[
+                #                         html.Img(
+                #                             src="https://zazuko.com/logo/zazuko-logo.svg"
+                #                         )
+                #                     ],
+                #                     href="https://zazuko.com",
+                #                     style={"display": "inline-flex"},
+                #                 )
+                #             ],
+                #         ),
+                #     ],
+                # )
             ],
-            style={"height": "10vh", "align-items": "center", "display": "flex"},
+            # style={"height": "10vh", "align-items": "center", "display": "flex"},
         ),
+        # dbc.Row(
+        #     [
+        #         dbc.Col(controls, md=2),
+        #     ]
+        # ),
         dbc.Row(
             [
-                dbc.Col(controls, md=2),
                 dbc.Col(
                     children=[
+                        dbc.Col(
+                            controls,
+                            md=2,
+                            style={
+                                "position": "absolute",
+                                "top": "1rem",
+                                "left": "3rem",
+                            },
+                        ),
                         dcc.Loading(
                             id="loading",
                             children=[
@@ -88,26 +110,27 @@ app.layout = dbc.Container(
                                     id="div-map",
                                     style={
                                         "width": "100%",
-                                        "height": "90vh",
+                                        "height": "calc(100vh - 6px)",
                                     },
                                 )
                             ],
                             type="circle",
                             style={
                                 "width": "100%",
-                                "height": "90vh",
+                                "height": "calc(100vh - 6px)",
                                 "display": "flex",
                                 "align-items": "center",
                             },
                         ),
                     ],
-                    md=10,
-                    style={"padding": 0},
+                    md=12,
+                    style={"padding": 0, "margin": 0},
                 ),
             ],
         ),
     ],
     fluid=True,
+    style={"background-color": "#121212"},
 )
 
 
