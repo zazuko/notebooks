@@ -7,7 +7,7 @@ class LindasClient(SparqlClient):
         query = """
         SELECT ?geom
         WHERE {{
-            {} <http://www.opengis.net/ont/geosparql#hasGeometry> ?_geom.
+            <{}> <http://www.opengis.net/ont/geosparql#hasGeometry> ?_geom.
 
             SERVICE <https://geo.ld.admin.ch/query> {{
                 ?_geom <http://www.opengis.net/ont/geosparql#asWKT> ?geom.
@@ -42,7 +42,7 @@ class LindasClient(SparqlClient):
         FROM <https://lindas.admin.ch/foj/zefix>
         FROM <https://lindas.admin.ch/territorial>
         WHERE {{
-        VALUES ?muni {{ {} }}
+        VALUES ?muni {{ <{}> }}
         {{
             SELECT ?thoroughfare (COUNT(?sub) AS ?companies)
             WHERE {{

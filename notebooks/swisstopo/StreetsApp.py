@@ -2,6 +2,7 @@ import folium
 import numpy as np
 import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
 from streamlit_folium import st_folium
 
 from client import LindasClient
@@ -39,7 +40,10 @@ add_selectbox = st.sidebar.selectbox(
     on_change=update_commune,
 )
 st_data = st_folium(st.session_state.map)
-
+# html_file = "/home/magdalena/zazuko/notebooks/notebooks/swisstopo/zug.html"
+# with open(html_file, "r", encoding="utf-8") as f:
+#     text = f.read()
+# components.html(text, height=900)
 
 make_map_responsive = """
  <style>
