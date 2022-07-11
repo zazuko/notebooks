@@ -1,7 +1,6 @@
 import os
-from turtle import right
+import time
 
-import dash
 import dash_bootstrap_components as dbc
 from dash import Dash, Input, Output, dcc, html
 from dash.dependencies import Input, Output
@@ -10,17 +9,6 @@ from client import LindasClient
 from utils import plot_streets_heatmap
 
 client = LindasClient("https://ld.admin.ch/query")
-
-
-# app = Dash(
-#     __name__,
-#     meta_tags=[
-#         {
-#             "name": "viewport",
-#             "content": "width=device-width, height=device-height, initial-scale=1.0",
-#         }
-#     ],
-# )
 
 
 def get_options():
@@ -36,7 +24,7 @@ def get_options():
 communes, id2name = get_options()
 
 
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 controls = html.Div(
     [
@@ -57,50 +45,73 @@ app.layout = dbc.Container(
                 html.Div(
                     className="container scalable",
                     children=[
-                        html.H2(
+                        html.Div(
                             id="banner-title",
                             children=[
-                                html.A(
+                                html.H2(
                                     "Where are most companies registered?",
+                                    id="title",
+                                    style={"text-align": "center"},
                                 )
                             ],
                         ),
-                        html.A(
-                            id="banner-logo",
-                            children=[
-                                html.Img(src=app.get_asset_url("dash-logo-new.png"))
-                            ],
-                            href="https://zazuko.com",
-                        ),
+                        # html.Div(
+                        #     id="banner-logo",
+                        #     children=[
+                        #         html.A(
+                        #             id="logo",
+                        #             children=[
+                        #                 html.Img(
+                        #                     src="https://zazuko.com/logo/zazuko-logo.svg"
+                        #                 )
+                        #             ],
+                        #             href="https://zazuko.com",
+                        #             style={"display": "inline-flex"},
+                        #         )
+                        #     ],
+                        # ),
                     ],
                 )
             ],
+            style={"height": "10vh", "align-items": "center", "display": "flex"},
         ),
-        # html.H2("Where are most companies registered?"),
         dbc.Row(
             [
                 dbc.Col(controls, md=2),
                 dbc.Col(
-                    html.Iframe(
-                        src="assets/zug.html",
-                        id="div-map",
-                        style={"height": "100%", "width": "100%"},
-                    ),
+                    children=[
+                        dcc.Loading(
+                            id="loading",
+                            children=[
+                                html.Iframe(
+                                    src="assets/zug.html",
+                                    id="div-map",
+                                    style={
+                                        "width": "100%",
+                                        "height": "90vh",
+                                    },
+                                )
+                            ],
+                            type="circle",
+                            style={
+                                "width": "100%",
+                                "height": "90vh",
+                                "display": "flex",
+                                "align-items": "center",
+                            },
+                        ),
+                    ],
                     md=10,
-                    style={"padding-right": 0},
+                    style={"padding": 0},
                 ),
             ],
-            align="center",
         ),
     ],
     fluid=True,
 )
 
 
-@app.callback(
-    dash.dependencies.Output("div-map", "src"),
-    dash.dependencies.Input("commune-selector", "value"),
-)
+@app.callback(Output("div-map", "src"), Input("commune-selector", "value"))
 def update_map(muni_id) -> str:
     if muni_id:
         file = "assets/{}.html".format(id2name[muni_id])
