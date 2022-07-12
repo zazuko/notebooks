@@ -133,9 +133,9 @@ app.layout = dbc.Container(
 
 
 @app.callback(Output("div-map", "src"), Input("commune-selector", "value"))
-def update_map(muni_id: str) -> Optional[str]:
+def update_map(muni_id: int) -> Optional[str]:
     if muni_id:
-        file = "assets/{}.html".format(id2name[muni_id])
+        file = "assets/{}.html".format(muni_id)
         file_full_path = (
             "/home/magdalena/zazuko/notebooks/notebooks/swisstopo/{}".format(file)
         )
