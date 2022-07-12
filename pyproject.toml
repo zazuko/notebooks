@@ -17,7 +17,6 @@ plotly = "^5.1.0"
 geopy = "^2.2.0"
 networkx = "^2.6.2"
 bokeh = "^2.3.3"
-mne-connectivity = "^0.3"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^20.8b1", allow-prereleases = true}
