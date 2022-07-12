@@ -27,7 +27,7 @@ def plot_streets_heatmap(centroid: list, df: pd.DataFrame) -> folium.Map:
             bucket = None
         return {
             "fillOpacity": 0.6,
-            "weight": 3,
+            "weight": 3,  # int(bucket + 1),
             "opacity": 1,
             "fillColor": "303030"
             if bucket is None
