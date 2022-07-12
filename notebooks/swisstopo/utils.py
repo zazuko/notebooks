@@ -14,9 +14,13 @@ def classify(df, N=6):
     return df, labels
 
 
-def plot_streets_heatmap(
-    centroid: list = [46.837545, 8.197028], df: pd.DataFrame = None
-) -> folium.Map:
+def plot_switzerland() -> folium.Map:
+    return folium.Map(
+        location=[46.837545, 8.197028], zoom_start=8.5, tiles="CartoDBdark_matter"
+    )
+
+
+def plot_streets_heatmap(centroid: list, df: pd.DataFrame) -> folium.Map:
     def style_function(feature, N=6, cmap=plt.get_cmap("inferno")):
         bucket = df["bucket"].get(int(feature["id"][-5:]), None)
         if bucket == 0 and df["companies"].get(int(feature["id"][-5:]), None) == 0:
@@ -40,28 +44,23 @@ def plot_streets_heatmap(
             "fillOpacity": 0.8,
         }
 
-    if True:
-        # m = folium.Map(location=centroid, zoom_start=8.5, tiles="CartoDBdark_matter")
-        df, labels = classify(df)
-        m = folium.Map(location=centroid, zoom_start=13, tiles="CartoDBdark_matter")
-
-        for bucket, label in enumerate(labels):
-
-            feature_group = folium.FeatureGroup(name=label).add_to(m)
-            folium.features.GeoJson(
-                df[df.bucket == bucket],
-                style_function=style_function,
-                control=False,
-                highlight_function=highlight_function,
-                tooltip=folium.features.GeoJsonTooltip(
-                    fields=["thoroughfare", "companies"],
-                    aliases=["Street: ", "Registered companies: "],
-                    style=(
-                        "background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;"
-                    ),
+    df, labels = classify(df)
+    m = folium.Map(location=centroid, zoom_start=13, tiles="CartoDBdark_matter")
+    for bucket, label in enumerate(labels):
+        feature_group = folium.FeatureGroup(name=label).add_to(m)
+        folium.features.GeoJson(
+            df[df.bucket == bucket],
+            style_function=style_function,
+            control=False,
+            highlight_function=highlight_function,
+            tooltip=folium.features.GeoJsonTooltip(
+                fields=["thoroughfare", "companies"],
+                aliases=["Street: ", "Registered companies: "],
+                style=(
+                    "background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;"
                 ),
-            ).add_to(feature_group)
-
-        folium.LayerControl(name="bla").add_to(m)
+            ),
+        ).add_to(feature_group)
+    folium.LayerControl(name="bla").add_to(m)
 
     return m

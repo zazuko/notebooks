@@ -1,11 +1,12 @@
 import os
+from typing import Optional
 
 import dash_bootstrap_components as dbc
 from dash import Dash, Input, Output, dcc, html
 from dash.dependencies import Input, Output
 
 from client import LindasClient
-from utils import plot_streets_heatmap
+from utils import plot_streets_heatmap, plot_switzerland
 
 client = LindasClient("https://ld.admin.ch/query")
 
@@ -35,6 +36,8 @@ controls = html.Div(
     ]
 )
 
+m = plot_switzerland()
+m.save("/home/magdalena/zazuko/notebooks/notebooks/swisstopo/assets/basemap.html")
 
 app.layout = dbc.Container(
     [
@@ -84,11 +87,6 @@ app.layout = dbc.Container(
             ],
             # style={"height": "10vh", "align-items": "center", "display": "flex"},
         ),
-        # dbc.Row(
-        #     [
-        #         dbc.Col(controls, md=2),
-        #     ]
-        # ),
         dbc.Row(
             [
                 dbc.Col(
@@ -106,13 +104,13 @@ app.layout = dbc.Container(
                             id="loading",
                             children=[
                                 html.Iframe(
-                                    src="assets/zug.html",
+                                    src="assets/basemap.html",
                                     id="div-map",
                                     style={
                                         "width": "100%",
                                         "height": "calc(100vh - 6px)",
                                     },
-                                )
+                                ),
                             ],
                             type="circle",
                             style={
@@ -135,7 +133,7 @@ app.layout = dbc.Container(
 
 
 @app.callback(Output("div-map", "src"), Input("commune-selector", "value"))
-def update_map(muni_id) -> str:
+def update_map(muni_id: str) -> Optional[str]:
     if muni_id:
         file = "assets/{}.html".format(id2name[muni_id])
         file_full_path = (
