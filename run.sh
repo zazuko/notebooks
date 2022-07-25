@@ -9,6 +9,8 @@ jupyter nbconvert --execute --to=html --template=./html/zazuko notebooks/statist
 jupyter nbconvert --execute --to=html --template=./html/zazuko notebooks/statistics_zurich/real_estate.ipynb
 jupyter nbconvert --execute --to=html --template=./html/zazuko notebooks/statistics_zurich/data_model.ipynb
 jupyter nbconvert --execute --to=html --template=./html/zazuko notebooks/electricity_prices/electricity_prices.ipynb
+jupyter nbconvert --execute --to=html --template=./html/zazuko notebooks/politics/parliament_members.ipynb
+jupyter nbconvert --execute --to=html --template=./html/zazuko notebooks/politics/parliament_commissions.ipynb
 
 mv notebooks/**/*.html html/
 rsync -avr notebooks/img html/
