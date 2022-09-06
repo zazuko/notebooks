@@ -256,6 +256,14 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "debugpy"
+version = "1.6.3"
+description = "An implementation of the Debug Adapter Protocol for Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "decorator"
 version = "5.1.1"
 description = "Decorators for Humans"
@@ -446,22 +454,27 @@ python-versions = "*"
 
 [[package]]
 name = "ipykernel"
-version = "5.5.6"
+version = "6.15.2"
 description = "IPython Kernel for Jupyter"
 category = "main"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.7"
 
 [package.dependencies]
 appnope = {version = "*", markers = "platform_system == \"Darwin\""}
-ipython = ">=5.0.0"
-ipython-genutils = "*"
-jupyter-client = "*"
-tornado = ">=4.2"
-traitlets = ">=4.1.0"
+debugpy = ">=1.0"
+ipython = ">=7.23.1"
+jupyter-client = ">=6.1.12"
+matplotlib-inline = ">=0.1"
+nest-asyncio = "*"
+packaging = "*"
+psutil = "*"
+pyzmq = ">=17"
+tornado = ">=6.1"
+traitlets = ">=5.1.0"
 
 [package.extras]
-test = ["pytest (!=5.3.4)", "pytest-cov", "flaky", "nose", "jedi (<=0.17.2)"]
+test = ["flaky", "ipyparallel", "pre-commit", "pytest-cov", "pytest-timeout", "pytest (>=6.0)"]
 
 [[package]]
 name = "ipython"
@@ -1074,6 +1087,17 @@ python-versions = ">=3.6.2"
 wcwidth = "*"
 
 [[package]]
+name = "psutil"
+version = "5.9.1"
+description = "Cross-platform lib for process and system monitoring in Python."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.extras]
+test = ["ipaddress", "mock", "enum34", "pywin32", "wmi"]
+
+[[package]]
 name = "ptyprocess"
 version = "0.7.0"
 description = "Run a subprocess in a pseudo terminal"
@@ -1537,7 +1561,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "697868abc13dfe72561ff1b59a879ec8ba63e2f94aa07a81942ed2063910640e"
+content-hash = "a9baf3971c23cca08213af969e8b108e4e6b767dc062f7ec71555168535fd437"
 
 [metadata.files]
 appdirs = [
@@ -1590,6 +1614,7 @@ cycler = [
     {file = "cycler-0.11.0-py3-none-any.whl", hash = "sha256:3a27e95f763a428a739d2add979fa7494c912a32c17c4c38c4d5f082cad165a3"},
     {file = "cycler-0.11.0.tar.gz", hash = "sha256:9c87405839a19696e837b3b818fed3f5f69f16f1eec1a1ad77e043dcea9c772f"},
 ]
+debugpy = []
 decorator = []
 defusedxml = [
     {file = "defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"},
@@ -1631,10 +1656,7 @@ iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
 ]
-ipykernel = [
-    {file = "ipykernel-5.5.6-py3-none-any.whl", hash = "sha256:66f824af1ef4650e1e2f6c42e1423074321440ef79ca3651a6cfd06a4e25e42f"},
-    {file = "ipykernel-5.5.6.tar.gz", hash = "sha256:4ea44b90ae1f7c38987ad58ea0809562a17c2695a0499644326f334aecd369ec"},
-]
+ipykernel = []
 ipython = []
 ipython-genutils = [
     {file = "ipython_genutils-0.2.0-py2.py3-none-any.whl", hash = "sha256:72dd37233799e619666c9f639a9da83c34013a73e8bbc79a7a6348d93c61fab8"},
@@ -1788,6 +1810,7 @@ pluggy = [
 ]
 prometheus-client = []
 prompt-toolkit = []
+psutil = []
 ptyprocess = [
     {file = "ptyprocess-0.7.0-py2.py3-none-any.whl", hash = "sha256:4b41f3967fce3af57cc7e94b888626c18bf37a083e3651ca8feeb66d492fef35"},
     {file = "ptyprocess-0.7.0.tar.gz", hash = "sha256:5c5d0a3b48ceee0b48485e0c26037c0acd7d29765ca3fbb5cb3831d347423220"},
