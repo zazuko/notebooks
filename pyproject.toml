@@ -17,6 +17,9 @@ geopy = "^2.2.0"
 networkx = "^2.6.2"
 bokeh = "^2.3.3"
 Pillow = "^9.0.1"
+SQLAlchemy = "^2.0.0"
+python-dotenv = "^0.21.1"
+psycopg2-binary = "^2.9.5"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^20.8b1", allow-prereleases = true}

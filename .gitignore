@@ -3,6 +3,7 @@
 .github/
 .ipynb_checkpoints
 venv
+.env
 
 html/*.html
 !html/index.html
