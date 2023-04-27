@@ -27,7 +27,6 @@ jobs:
           pip install --force-reinstall virtualenv
           pip freeze | grep virtualenv
           virtualenv -q venv
-        # Recommended poetry setup: https://python-poetry.org/docs/#ci-recommendations
           wget https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py
           export POETRY_HOME=/opt/poetry
           python install-poetry.py
