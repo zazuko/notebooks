@@ -67,7 +67,7 @@ class Test_geoadmin_queries:
     @classmethod
     def setup_class(cls):
 
-        cls.endpoint = "https://ld.geo.admin.ch/query"
+        cls.endpoint = "https://geo.ld.admin.ch/query"
         cls.client = SparqlClient(cls.endpoint, timeout=30)
         cls.client.add_prefixes(testcases[cls.endpoint]["prefixes"])
 
@@ -77,7 +77,7 @@ class Test_geoadmin_queries:
         df = self.client.send_query(query, timeout=None)
         assert df.shape[0] == 3
 
-    test_data = testcases["https://ld.geo.admin.ch/query"]["queries"]
+    test_data = testcases["https://geo.ld.admin.ch/query"]["queries"]
 
     @pytest.mark.parametrize("query", test_data)
     def test_queries(self, query):
