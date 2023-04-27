@@ -34,7 +34,7 @@ jobs:
         run: python install-poetry.py
 
       - name: Install dependencies
-        run: $POETRY_HOME/bin/poetry install
+        run: poetry install
 
       - name: Install Jupyter
         run: pip install jupyterlab sparqlkernel
