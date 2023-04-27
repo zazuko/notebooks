@@ -22,7 +22,7 @@ jobs:
           python-version: 3.9
 
       - name: Install dependencies
-        run: ./dependencies.sh
+        run: pip install .
 
       - name: Install Jupyter
         run: pip install jupyterlab sparqlkernel
