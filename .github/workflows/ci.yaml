@@ -31,7 +31,7 @@ jobs:
         run: export POETRY_HOME=/opt/poetry
 
       - name: Install poetry
-        run: python install-poetry.py
+        run: python install-poetry.py --version 1.2.0
 
       - name: check poetry
         run: $POETRY_HOME/bin/poetry --version
