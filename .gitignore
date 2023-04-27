@@ -9,3 +9,4 @@ html/*.html
 html/img/
 
 !.github/workflows/ci.yaml
+*.env
