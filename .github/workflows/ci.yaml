@@ -17,6 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
       - name: Install and configure Poetry
         uses: snok/install-poetry@v1
         with:
@@ -24,10 +28,6 @@ jobs:
           virtualenvs-create: false
           virtualenvs-in-project: false
           installer-parallel: true
-
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.9
 
       - name: Install dependencies
         run: poetry install
